@@ -3046,6 +3046,47 @@
                   "children": [
                     {
                       "type": "frame",
+                      "id": "995j3",
+                      "name": "Lang Switcher",
+                      "gap": 4,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ksvAd",
+                          "name": "lang-es",
+                          "fill": "#0D2847",
+                          "content": "ES",
+                          "fontFamily": "Open Sans",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "uSKt7",
+                          "name": "lang-sep",
+                          "opacity": 0.3,
+                          "fill": "#0D2847",
+                          "content": "/",
+                          "fontFamily": "Open Sans",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "8ZjmP",
+                          "name": "lang-en",
+                          "opacity": 0.4,
+                          "fill": "#0D2847",
+                          "content": "EN",
+                          "fontFamily": "Open Sans",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
                       "id": "pdAKx",
                       "name": "CTA Button",
                       "fill": "#1B4B8F",
@@ -4400,6 +4441,44 @@
               "children": [
                 {
                   "type": "frame",
+                  "id": "BmD8D",
+                  "name": "Lang Switcher",
+                  "gap": 4,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "m9p1I",
+                      "fill": "#0D2847",
+                      "content": "ES",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "kgsbL",
+                      "opacity": 0.3,
+                      "fill": "#0D2847",
+                      "content": "/",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "uJwVo",
+                      "opacity": 0.4,
+                      "fill": "#0D2847",
+                      "content": "EN",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
                   "id": "xdgQI",
                   "name": "CTA Button",
                   "fill": "#1B4B8F",
@@ -5459,6 +5538,44 @@
               ]
             },
             {
+              "type": "frame",
+              "id": "QLXmF",
+              "name": "Lang Switcher Mobile",
+              "gap": 3,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "neccI",
+                  "fill": "#0D2847",
+                  "content": "ES",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "tUyEc",
+                  "opacity": 0.3,
+                  "fill": "#0D2847",
+                  "content": "/",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "OnxK3",
+                  "opacity": 0.4,
+                  "fill": "#0D2847",
+                  "content": "EN",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
               "type": "icon_font",
               "id": "bQNMG",
               "name": "navMenu",
@@ -6426,6 +6543,47 @@
               ]
             },
             {
+              "type": "frame",
+              "id": "iU6js",
+              "name": "Lang Switcher Mobile",
+              "gap": 3,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "YRX5G",
+                  "name": "lang-es-m",
+                  "fill": "#0D2847",
+                  "content": "ES",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "WapCw",
+                  "name": "lang-sep-m",
+                  "opacity": 0.3,
+                  "fill": "#0D2847",
+                  "content": "/",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "4oVIM",
+                  "name": "lang-en-m",
+                  "opacity": 0.4,
+                  "fill": "#0D2847",
+                  "content": "EN",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
               "type": "icon_font",
               "id": "2MZUx",
               "name": "Menu Icon",
@@ -7143,6 +7301,44 @@
                   "gap": 16,
                   "alignItems": "center",
                   "children": [
+                    {
+                      "type": "frame",
+                      "id": "C9xQS",
+                      "name": "Lang Switcher",
+                      "gap": 4,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "isgst",
+                          "fill": "#0D2847",
+                          "content": "ES",
+                          "fontFamily": "Open Sans",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Ss9EV",
+                          "opacity": 0.3,
+                          "fill": "#0D2847",
+                          "content": "/",
+                          "fontFamily": "Open Sans",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "3TFkT",
+                          "opacity": 0.4,
+                          "fill": "#0D2847",
+                          "content": "EN",
+                          "fontFamily": "Open Sans",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
                     {
                       "type": "frame",
                       "id": "xGGEn",
@@ -8233,6 +8429,44 @@
               ]
             },
             {
+              "type": "frame",
+              "id": "sqn7O",
+              "name": "Lang Switcher Mobile",
+              "gap": 3,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "R6Pmy",
+                  "fill": "#0D2847",
+                  "content": "ES",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "tVxd8",
+                  "opacity": 0.3,
+                  "fill": "#0D2847",
+                  "content": "/",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "avNya",
+                  "opacity": 0.4,
+                  "fill": "#0D2847",
+                  "content": "EN",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
               "type": "icon_font",
               "id": "eXlsq",
               "name": "mNavMenu",
@@ -9194,6 +9428,44 @@
                   "content": "DEEP BRAIN MARKETS",
                   "fontFamily": "Montserrat",
                   "fontSize": 13,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "7Qg9R",
+              "name": "Lang Switcher Mobile",
+              "gap": 3,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "4FrsB",
+                  "fill": "#0D2847",
+                  "content": "ES",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "qxWt2",
+                  "opacity": 0.3,
+                  "fill": "#0D2847",
+                  "content": "/",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "SMqIN",
+                  "opacity": 0.4,
+                  "fill": "#0D2847",
+                  "content": "EN",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
                   "fontWeight": "700"
                 }
               ]
@@ -10265,6 +10537,44 @@
                   "gap": 16,
                   "alignItems": "center",
                   "children": [
+                    {
+                      "type": "frame",
+                      "id": "iQBW6",
+                      "name": "Lang Switcher",
+                      "gap": 4,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "gjZfh",
+                          "fill": "#0D2847",
+                          "content": "ES",
+                          "fontFamily": "Open Sans",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Sczl4",
+                          "opacity": 0.3,
+                          "fill": "#0D2847",
+                          "content": "/",
+                          "fontFamily": "Open Sans",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "q0UQi",
+                          "opacity": 0.4,
+                          "fill": "#0D2847",
+                          "content": "EN",
+                          "fontFamily": "Open Sans",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
                     {
                       "type": "frame",
                       "id": "xzTRs",
@@ -11355,6 +11665,44 @@
               ]
             },
             {
+              "type": "frame",
+              "id": "Yq6tN",
+              "name": "Lang Switcher Mobile",
+              "gap": 3,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pBDpX",
+                  "fill": "#0D2847",
+                  "content": "ES",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "jARrr",
+                  "opacity": 0.3,
+                  "fill": "#0D2847",
+                  "content": "/",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "GEDgW",
+                  "opacity": 0.4,
+                  "fill": "#0D2847",
+                  "content": "EN",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 11,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
               "type": "icon_font",
               "id": "QOPD5",
               "name": "mNavMenu",
@@ -12421,6 +12769,44 @@
                   "gap": 16,
                   "alignItems": "center",
                   "children": [
+                    {
+                      "type": "frame",
+                      "id": "UvXTe",
+                      "name": "Lang Switcher",
+                      "gap": 4,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Gpfdr",
+                          "fill": "#0D2847",
+                          "content": "ES",
+                          "fontFamily": "Open Sans",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yeSpv",
+                          "opacity": 0.3,
+                          "fill": "#0D2847",
+                          "content": "/",
+                          "fontFamily": "Open Sans",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bj1FM",
+                          "opacity": 0.4,
+                          "fill": "#0D2847",
+                          "content": "EN",
+                          "fontFamily": "Open Sans",
+                          "fontSize": 13,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
                     {
                       "type": "frame",
                       "id": "bsiqW",
