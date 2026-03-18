@@ -56,13 +56,13 @@ export default function MobileMenu({ items, cta, lang }: MobileMenuProps) {
         />
       )}
 
-      {/* Panel del menú móvil */}
+      {/* Panel del menú móvil — top-20 coincide con la altura del navbar (h-20 = 80px) */}
       <nav
         id="mobile-menu"
         aria-label="Menú móvil"
-        className={`fixed top-[60px] left-0 right-0 bg-white z-50 border-b border-border shadow-lg transition-transform duration-300 ${isOpen ? "translate-y-0" : "-translate-y-full"}`}
+        className={`fixed top-20 left-0 right-0 bg-white z-50 border-b border-border shadow-lg transition-transform duration-300 ${isOpen ? "translate-y-0" : "-translate-y-[200%]"}`}
       >
-        <ul className="flex flex-col p-5 gap-1">
+        <ul className="flex flex-col px-5 pt-3 pb-1 gap-1">
           {items.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -80,11 +80,11 @@ export default function MobileMenu({ items, cta, lang }: MobileMenuProps) {
           })}
         </ul>
 
-        {/* Botón CTA dentro del menú móvil */}
-        <div className="p-5 pt-2">
+        {/* Botón CTA — ancho contenido, no ocupa toda la pantalla */}
+        <div className="px-5 py-4">
           <Link
             href={`/${lang}/contacto`}
-            className="flex items-center justify-center w-full h-12 bg-primary text-white font-semibold text-base rounded-[8px] transition-opacity hover:opacity-90"
+            className="inline-flex items-center justify-center w-full max-w-xs h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] transition-opacity hover:opacity-90"
           >
             {cta}
           </Link>
