@@ -4,7 +4,35 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is a **design-only repository** for Deep Brain Markets. It contains a single Pencil design file (`deepbrain.pen`) managed via the `pencil` MCP server.
+This repository contains the design file (`deepbrain.pen`) and the web project (`web/`) for Deep Brain Markets — a service website covering legal, accounting, imports, and ecommerce advisory.
+
+## Web Project (`web/`)
+
+**Stack:** Next.js 15 (App Router) · TypeScript · Tailwind CSS · next-intl · Supabase · Resend · Vercel
+
+### SEO & Accessibility Rules (non-negotiable)
+- Use semantic HTML: `<header>`, `<main>`, `<footer>`, `<nav>`, `<article>`, `<section>`, `<aside>`
+- Every page must have a unique `<title>` and `<meta name="description">` via Next.js `generateMetadata`
+- Images must always have descriptive `alt` attributes
+- Headings must follow hierarchy: one `<h1>` per page, then `<h2>`, `<h3>`...
+- Links must have descriptive text — never "click here"
+- Use Next.js `<Link>` for internal navigation and `<Image>` for all images
+- Structured data (JSON-LD) on every page
+
+### Responsive Rules (non-negotiable)
+- Mobile-first: design from 375px up
+- Never use fixed pixel widths that break on small screens
+- All interactive elements must be tappable (min 44×44px touch target)
+
+### i18n
+- All routes live under `app/[lang]/` (`es` default, `en` for international)
+- All user-facing strings go in `messages/es.json` and `messages/en.json` — never hardcode text
+- Geo-detection via `x-vercel-ip-country` header in middleware redirects root `/` to the correct locale
+
+### Blog
+- Posts are MDX files in `content/blog/es/` and `content/blog/en/`
+- Post pages use ISR (revalidate on comment approval)
+- Comments stored in Supabase, moderated via `/admin` panel
 
 ## Working with Design Files
 
