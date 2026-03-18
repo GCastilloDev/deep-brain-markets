@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "home": {
+    "title": "Deep Brain Markets",
+    "subtitle": "Soluciones legales, contables y de comercio internacional"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "legal": "Servicios Legales",
+    "accounting": "Servicios Contables",
+    "imports": "Importaciones",
+    "ecommerce": "Asesoría Ecommerce"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Leer más",
+    "comments": "Comentarios",
+    "leaveComment": "Deja un comentario",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "comment": "Comentario",
+    "submit": "Enviar comentario",
+    "reply": "Respuesta"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "submit": "Enviar mensaje",
+    "success": "Mensaje enviado correctamente",
+    "error": "Hubo un error, intenta de nuevo"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados"
+  }
+}
