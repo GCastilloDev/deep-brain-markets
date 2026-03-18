@@ -1,9 +1,12 @@
 {
   "nav": {
     "home": "Home",
+    "about": "About",
     "services": "Services",
+    "ecommerce": "E-commerce",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "cta": "Schedule a Meeting"
   },
   "home": {
     "title": "Deep Brain Markets",
@@ -37,6 +40,19 @@
     "error": "Something went wrong, please try again"
   },
   "footer": {
-    "rights": "All rights reserved"
+    "tagline": "Legal and commercial advisory for a connected world.",
+    "services": "Services",
+    "legal_svc": "Legal",
+    "accounting_svc": "Accounting",
+    "ecommerce_svc": "E-commerce",
+    "company": "Company",
+    "about": "About Us",
+    "careers": "Careers",
+    "blog": "Blog",
+    "contact": "Contact",
+    "legal_col": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "rights": "All rights reserved."
   }
 }

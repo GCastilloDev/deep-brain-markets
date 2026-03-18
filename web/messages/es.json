@@ -1,9 +1,12 @@
 {
   "nav": {
     "home": "Inicio",
+    "about": "Nosotros",
     "services": "Servicios",
+    "ecommerce": "E-commerce",
     "blog": "Blog",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "cta": "Agendar Cita"
   },
   "home": {
     "title": "Deep Brain Markets",
@@ -37,6 +40,19 @@
     "error": "Hubo un error, intenta de nuevo"
   },
   "footer": {
-    "rights": "Todos los derechos reservados"
+    "tagline": "Asesoría legal y comercial para un mundo conectado.",
+    "services": "Servicios",
+    "legal_svc": "Legal",
+    "accounting_svc": "Contabilidad",
+    "ecommerce_svc": "E-commerce",
+    "company": "Empresa",
+    "about": "Sobre Nosotros",
+    "careers": "Carreras",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "legal_col": "Legal",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "rights": "Todos los derechos reservados."
   }
 }

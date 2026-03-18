@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ─── Tokens del Design System de Deep Brain Markets ─────────────────────── */
+/* Todos los valores vienen directamente del archivo deepbrain.pen            */
+
+@theme {
+  /* --- Colores ------------------------------------------------------------ */
+  --color-primary:          #1B4B8F; /* Azul principal de marca               */
+  --color-legal-dark:       #0D2847; /* Azul oscuro — textos y footer         */
+  --color-commerce-green:   #27AE60; /* Verde — área de ecommerce             */
+  --color-accent-green:     #52BE80; /* Verde claro — acentos                 */
+
+  /* Fondos */
+  --color-bg:               #F5F7FA; /* Fondo general del sitio               */
+  --color-bg-neutral:       #F8F9FA; /* Fondo neutro — secciones alternas     */
+  --color-bg-soft-blue:     #EBF2FA; /* Fondo azul suave — highlights         */
+  --color-white:            #FFFFFF;
+
+  /* Textos */
+  --color-text-primary:     #0D2847; /* Texto principal — títulos             */
+  --color-text-body:        #2C3E50; /* Texto cuerpo — párrafos               */
+  --color-text-secondary:   #5A7499; /* Texto secundario — subtítulos         */
+  --color-text-service:     #1B4B8F; /* Texto azul — etiquetas de servicio    */
+  --color-text-white:       #FFFFFF;
+  --color-placeholder:      #9CA3AF; /* Color placeholder en inputs           */
+
+  /* Bordes */
+  --color-border:           #E5E7EB; /* Borde estándar                        */
+  --color-border-soft:      #F0F4F8; /* Borde suave — cards                   */
+
+  /* --- Tipografías -------------------------------------------------------- */
+  --font-title:             "Montserrat", sans-serif;
+  --font-body:              "Open Sans", sans-serif;
+
+  /* --- Tamaños de fuente -------------------------------------------------- */
+  --text-h1:                3.5rem;
+  --text-h2:                2.25rem;
+  --text-h3:                1.5rem;
+  --text-intro:             1.125rem;
+  --text-body:              1rem;
+  --text-micro:             0.875rem;
+  --text-small:             0.75rem;
+  --text-label:             0.6875rem;
+
+  /* --- Radios de borde ---------------------------------------------------- */
+  --radius-button:          8px;
+  --radius-card:            12px;
+
+  /* --- Espaciados --------------------------------------------------------- */
+  --spacing-xs:             4px;
+  --spacing-sm:             8px;
+  --spacing-md:             16px;
+  --spacing-lg:             24px;
+  --spacing-xl:             32px;
+  --spacing-2xl:            48px;
+  --spacing-3xl:            64px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ─── Estilos base ────────────────────────────────────────────────────────── */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  color: var(--color-text-primary);
 }

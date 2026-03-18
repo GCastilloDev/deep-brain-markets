@@ -1,14 +1,25 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Montserrat, Open_Sans } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import "../globals.css";
 
-const geist = Geist({
+/* Fuente para títulos y headings */
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-geist",
+  variable: "--font-title",
+  display: "swap",
+});
+
+/* Fuente para cuerpo de texto */
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -16,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Deep Brain Markets",
     default: "Deep Brain Markets",
   },
-  description: "Servicios legales, contables, importaciones y asesoría ecommerce",
+  description: "Servicios legales, contables, importaciones y asesoría ecommerce para negocios globales.",
 };
 
 export default async function LangLayout({
@@ -28,27 +39,38 @@ export default async function LangLayout({
 }) {
   const { lang } = await params;
 
-  // Si el idioma en la URL no es válido, muestra 404
+  /* Si el idioma no es válido, muestra 404 */
   if (!routing.locales.includes(lang as "es" | "en")) {
     notFound();
   }
 
-  // Carga las traducciones del idioma activo para los componentes cliente
+  /* Carga las traducciones del idioma activo */
   const messages = await getMessages();
 
   return (
-    <html lang={lang} className={`${geist.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
-        {/* Provee las traducciones a todos los componentes cliente de la app */}
+    <html
+      lang={lang}
+      className={`${montserrat.variable} ${openSans.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-bg text-text-body">
         <NextIntlClientProvider messages={messages}>
-          {children}
+          {/* Navbar sticky en la parte superior */}
+          <Navbar lang={lang} />
+
+          {/* Contenido principal de cada página */}
+          <main className="flex-1">
+            {children}
+          </main>
+
+          {/* Footer al final de todas las páginas */}
+          <Footer lang={lang} />
         </NextIntlClientProvider>
       </body>
     </html>
   );
 }
 
-// Genera las rutas estáticas para cada idioma en build time
+/* Genera las rutas estáticas para cada idioma */
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ lang: locale }));
 }
