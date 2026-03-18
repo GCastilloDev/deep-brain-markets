@@ -56,7 +56,7 @@ export default function Footer({ lang }: FooterProps) {
           >
             <div className="relative w-7 h-7 shrink-0">
               <Image
-                src="/images/logo.png"
+                src="/images/deep-brain-markets-logo.png"
                 alt="Logo Deep Brain Markets"
                 fill
                 className="object-contain"

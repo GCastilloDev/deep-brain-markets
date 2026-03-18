@@ -36,7 +36,7 @@ export default function Navbar({ lang }: NavbarProps) {
         >
           <div className="relative w-9 h-9 shrink-0">
             <Image
-              src="/images/logo.png"
+              src="/images/deep-brain-markets-logo.png"
               alt="Logo Deep Brain Markets"
               fill
               className="object-contain"
