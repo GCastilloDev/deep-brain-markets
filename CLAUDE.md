@@ -29,6 +29,17 @@ This repository contains the design file (`deepbrain.pen`) and the web project (
 - All user-facing strings go in `messages/es.json` and `messages/en.json` — never hardcode text
 - Geo-detection via `x-vercel-ip-country` header in middleware redirects root `/` to the correct locale
 
+### Security Rules (non-negotiable)
+- All API routes must validate and sanitize input before processing — never trust user data
+- Environment variables for all secrets (`SUPABASE_URL`, `RESEND_API_KEY`, etc.) — never hardcode credentials
+- HTTP security headers on every response: `Content-Security-Policy`, `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`
+- Rate limiting on all API routes (contact form, comments) to prevent abuse
+- Admin panel (`/admin`) must be protected — never publicly accessible without authentication
+- Supabase Row Level Security (RLS) enabled on all tables
+- Sanitize all user-generated content before rendering to prevent XSS
+- Form submissions must include CSRF protection
+- Never expose stack traces or internal errors to the client
+
 ### Blog
 - Posts are MDX files in `content/blog/es/` and `content/blog/en/`
 - Post pages use ISR (revalidate on comment approval)
