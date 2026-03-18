@@ -8,9 +8,17 @@
     "contact": "Contact",
     "cta": "Schedule a Meeting"
   },
+  "hero": {
+    "badge": "DUAL ADVISORY",
+    "h1_line1": "Comprehensive strategy for",
+    "h1_line2": "borderless markets",
+    "subtitle": "We unite legal rigor with digital agility. We simplify the complexity of international trade and corporate management.",
+    "btn_legal": "Legal Services",
+    "btn_ecom": "Global E-commerce"
+  },
   "home": {
-    "title": "Deep Brain Markets",
-    "subtitle": "Legal, accounting and international trade solutions"
+    "title": "Deep Brain Markets — Comprehensive strategy for borderless markets",
+    "description": "We unite legal rigor with digital agility. We simplify the complexity of international trade and corporate management."
   },
   "services": {
     "title": "Our Services",

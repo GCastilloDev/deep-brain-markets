@@ -8,9 +8,17 @@
     "contact": "Contacto",
     "cta": "Agendar Cita"
   },
+  "hero": {
+    "badge": "CONSULTORÍA DUAL",
+    "h1_line1": "Estrategia integral para",
+    "h1_line2": "mercados sin fronteras",
+    "subtitle": "Unimos el rigor legal con la agilidad digital. Simplificamos la complejidad del comercio exterior y la gestión corporativa.",
+    "btn_legal": "Servicios Legales",
+    "btn_ecom": "E-commerce Global"
+  },
   "home": {
-    "title": "Deep Brain Markets",
-    "subtitle": "Soluciones legales, contables y de comercio internacional"
+    "title": "Deep Brain Markets — Estrategia integral para mercados sin fronteras",
+    "description": "Unimos el rigor legal con la agilidad digital. Simplificamos la complejidad del comercio exterior y la gestión corporativa."
   },
   "services": {
     "title": "Nuestros Servicios",
