@@ -55,8 +55,19 @@ This repository contains the design file (`deepbrain.pen`) and the web project (
 - **cornerRadius**: always `8` for buttons, badges, and chips. Never use `9999` (pill/oval shape).
 - **Mobile versions**: every design must have a mobile version at 375px width, created alongside the desktop version.
 
+### Code Style
+- All comments must be in Spanish
+- Never leave uncommented code — every function, component, and non-obvious block must have a Spanish comment explaining what it does
+
 ## Git Workflow
 
-- Only `deepbrain.pen` and `CLAUDE.md` are tracked. The `ui/` folder and `.DS_Store` are gitignored.
+- Only `deepbrain.pen` and `CLAUDE.md` are tracked at root. The `ui/` folder and `.DS_Store` are gitignored.
 - Do not add co-author lines to commit messages.
 - Remote: `https://github.com/GCastilloDev/deep-brain-markets.git`
+- Commits must follow Conventional Commits standard and be written in Spanish:
+  - `feat: agregar header responsive`
+  - `fix: corregir validación del formulario de contacto`
+  - `chore: actualizar dependencias`
+  - `refactor: extraer componente de navegación`
+  - `style: ajustar espaciado del footer`
+  - `docs: actualizar CLAUDE.md con reglas de seguridad`
