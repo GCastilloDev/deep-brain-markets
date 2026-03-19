@@ -47,6 +47,30 @@
     "success": "Mensaje enviado correctamente",
     "error": "Hubo un error, intenta de nuevo"
   },
+  "expertise": {
+    "title": "Nuestras Áreas de Expertise",
+    "card1_title": "DBM Legal y Contable",
+    "card1_desc": "Soluciones robustas para el cumplimiento normativo, estructura fiscal y gestión contable de operaciones internacionales.",
+    "card1_svc1_title": "Derecho Fiscal y Tributario",
+    "card1_svc1_desc": "Optimización fiscal y cumplimiento en aduanas.",
+    "card1_svc2_title": "Compliance Corporativo",
+    "card1_svc2_desc": "Auditoría y estructuración legal de empresas.",
+    "card1_svc3_title": "Gestión Contable",
+    "card1_svc3_desc": "Contabilidad especializada para importadores.",
+    "card1_link": "Ver todos los servicios legales →",
+    "card2_title": "DMB Comercio Exterior y Ecommerce",
+    "card2_desc": "Estrategias para la expansión de mercados, logística internacional y posicionamiento en marketplaces globales.",
+    "card2_svc1_title": "Logística Global",
+    "card2_svc1_desc": "Coordinación de importación/exportación.",
+    "card2_svc2_title": "Marketplace Management",
+    "card2_svc2_desc": "Gestión de Amazon, Mercado Libre y Alibaba.",
+    "card2_svc3_title": "Estrategia Digital",
+    "card2_svc3_desc": "Marketing orientado a conversión internacional.",
+    "card2_link": "Ver servicios de comercio →"
+  },
+  "partners": {
+    "label": "ALIADOS ESTRATÉGICOS"
+  },
   "footer": {
     "tagline": "Asesoría legal y comercial para un mundo conectado.",
     "services": "Servicios",

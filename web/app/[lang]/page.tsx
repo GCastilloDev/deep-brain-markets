@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import HeroHome from "./_sections/HeroHome";
+import ExpertiseSection from "./_sections/ExpertiseSection";
+import PartnersStrip from "./_sections/PartnersStrip";
 
 /* Genera el metadata SEO dinámicamente según el idioma */
 export async function generateMetadata({
@@ -36,6 +38,10 @@ export default async function HomePage({
     <>
       {/* Sección hero — primera sección visible al cargar */}
       <HeroHome lang={lang} />
+      {/* Sección de expertise — 2 cards con servicios principales */}
+      <ExpertiseSection lang={lang} />
+      {/* Franja de aliados estratégicos */}
+      <PartnersStrip />
     </>
   );
 }

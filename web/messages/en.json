@@ -47,6 +47,30 @@
     "success": "Message sent successfully",
     "error": "Something went wrong, please try again"
   },
+  "expertise": {
+    "title": "Our Areas of Expertise",
+    "card1_title": "DBM Legal & Accounting",
+    "card1_desc": "Robust solutions for regulatory compliance, tax structure, and accounting management of international operations.",
+    "card1_svc1_title": "Tax & Fiscal Law",
+    "card1_svc1_desc": "Tax optimization and customs compliance.",
+    "card1_svc2_title": "Corporate Compliance",
+    "card1_svc2_desc": "Auditing and legal structuring of companies.",
+    "card1_svc3_title": "Accounting Management",
+    "card1_svc3_desc": "Specialized accounting for importers.",
+    "card1_link": "See all legal services →",
+    "card2_title": "DMB International Trade & Ecommerce",
+    "card2_desc": "Strategies for market expansion, international logistics, and positioning in global marketplaces.",
+    "card2_svc1_title": "Global Logistics",
+    "card2_svc1_desc": "Import/export coordination.",
+    "card2_svc2_title": "Marketplace Management",
+    "card2_svc2_desc": "Amazon, Mercado Libre and Alibaba management.",
+    "card2_svc3_title": "Digital Strategy",
+    "card2_svc3_desc": "Marketing focused on international conversion.",
+    "card2_link": "See trade services →"
+  },
+  "partners": {
+    "label": "STRATEGIC PARTNERS"
+  },
   "footer": {
     "tagline": "Legal and commercial advisory for a connected world.",
     "services": "Services",

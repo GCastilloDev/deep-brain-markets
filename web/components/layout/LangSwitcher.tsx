@@ -21,7 +21,7 @@ export default function LangSwitcher() {
     <button
       onClick={toggleLang}
       aria-label={`Cambiar idioma a ${locale === "es" ? "inglés" : "español"}`}
-      className="flex items-center gap-1 text-sm font-semibold text-text-primary hover:text-primary transition-colors"
+      className="flex items-center gap-1 text-sm font-semibold text-text-primary hover:text-primary transition-colors cursor-pointer"
     >
       {/* Idioma inactivo — opacidad reducida */}
       <span className={locale === "es" ? "opacity-100" : "opacity-40"}>ES</span>
