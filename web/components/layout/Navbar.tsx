@@ -43,7 +43,8 @@ export default function Navbar({ lang }: NavbarProps) {
               priority
             />
           </div>
-          <span className="font-title font-bold text-[18px] text-primary leading-none hidden sm:block">
+          {/* Nombre de marca — 12px en móvil, 18px en desktop, siempre visible */}
+          <span className="font-title font-bold text-[12px] sm:text-[18px] text-primary leading-none">
             DEEP BRAIN MARKETS
           </span>
         </Link>
