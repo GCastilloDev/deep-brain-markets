@@ -16,7 +16,8 @@ This repository contains the design file (`deepbrain.pen`) and the web project (
 - Images must always have descriptive `alt` attributes
 - Headings must follow hierarchy: one `<h1>` per page, then `<h2>`, `<h3>`...
 - Links must have descriptive text — never "click here"
-- Use Next.js `<Link>` for internal navigation and `<Image>` for all images
+- Use `<AppLink>` (not `<Link>` directly) for internal navigation links — it renders `<Link>` when the route is active or `<span>` when not yet built
+- Use Next.js `<Image>` for all images
 - Structured data (JSON-LD) on every page
 
 ### Responsive Rules (non-negotiable)
@@ -54,6 +55,13 @@ This repository contains the design file (`deepbrain.pen`) and the web project (
 
 - **cornerRadius**: always `8` for buttons, badges, and chips. Never use `9999` (pill/oval shape).
 - **Mobile versions**: every design must have a mobile version at 375px width, created alongside the desktop version.
+
+### Route Management
+
+- Active routes are defined in `web/lib/routes.ts` — `ACTIVE_ROUTES` Set + `activeHref(lang, path)` utility
+- To activate a route when it's built, add its path (e.g. `"/contacto"`) to `ACTIVE_ROUTES`
+- Use `activeHref()` everywhere a route is referenced; pass the result to `<AppLink href={...}>`
+- `<AppLink>` is at `web/components/ui/AppLink.tsx` — renders `<Link>` if href is defined, `<span>` (non-clickable) if undefined
 
 ### Code Style
 - All comments must be in Spanish

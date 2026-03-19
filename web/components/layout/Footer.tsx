@@ -118,7 +118,7 @@ export default function Footer({ lang }: FooterProps) {
                 />
               </div>
               <span className="font-title font-bold text-[13px] text-primary">
-                DEEP BRAIN
+                DEEP BRAIN MARKETS
               </span>
             </Link>
             <p className="text-sm text-text-secondary leading-relaxed">
