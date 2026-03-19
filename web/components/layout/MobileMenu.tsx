@@ -6,17 +6,18 @@ import { usePathname } from "next/navigation";
 
 interface NavItem {
   label: string;
-  href: string;
+  href: string | undefined;
 }
 
 interface MobileMenuProps {
   items: NavItem[];
   cta: string;
+  ctaHref: string | undefined;
   lang: string;
 }
 
 /* Componente cliente — menú hamburguesa para navegación móvil */
-export default function MobileMenu({ items, cta, lang }: MobileMenuProps) {
+export default function MobileMenu({ items, cta, ctaHref, lang }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
@@ -64,17 +65,23 @@ export default function MobileMenu({ items, cta, lang }: MobileMenuProps) {
       >
         <ul className="flex flex-col px-5 pt-3 pb-1 gap-1">
           {items.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = item.href ? pathname === item.href : false;
             return (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={`block py-3 px-2 text-base font-medium border-b border-border-soft transition-colors ${
-                    isActive ? "text-primary font-semibold" : "text-text-body hover:text-primary"
-                  }`}
-                >
-                  {item.label}
-                </Link>
+              <li key={item.label}>
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    className={`block py-3 px-2 text-base font-medium border-b border-border-soft transition-colors ${
+                      isActive ? "text-primary font-semibold" : "text-text-body hover:text-primary"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <span className="block py-3 px-2 text-base font-medium border-b border-border-soft text-text-body opacity-50 cursor-default">
+                    {item.label}
+                  </span>
+                )}
               </li>
             );
           })}
@@ -82,12 +89,18 @@ export default function MobileMenu({ items, cta, lang }: MobileMenuProps) {
 
         {/* Botón CTA — ancho contenido, no ocupa toda la pantalla */}
         <div className="px-5 py-4">
-          <Link
-            href={`/${lang}/contacto`}
-            className="inline-flex items-center justify-center w-full max-w-xs h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] transition-opacity hover:opacity-90"
-          >
-            {cta}
-          </Link>
+          {ctaHref ? (
+            <Link
+              href={ctaHref}
+              className="inline-flex items-center justify-center w-full max-w-xs h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] transition-opacity hover:opacity-90"
+            >
+              {cta}
+            </Link>
+          ) : (
+            <span className="inline-flex items-center justify-center w-full max-w-xs h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] opacity-50 cursor-default">
+              {cta}
+            </span>
+          )}
         </div>
       </nav>
     </>

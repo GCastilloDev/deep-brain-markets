@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Scale, ShoppingCart } from "lucide-react";
+import AppLink from "@/components/ui/AppLink";
+import { activeHref } from "@/lib/routes";
 
 interface HeroHomeProps {
   lang: string;
@@ -13,6 +14,11 @@ interface HeroHomeProps {
 export default function HeroHome({ lang }: HeroHomeProps) {
   const t = useTranslations("hero");
   const tNav = useTranslations("nav");
+
+  /* Hrefs — undefined si la ruta aún no está construida */
+  const legalHref    = activeHref(lang, "/servicios/legal");
+  const ecomHref     = activeHref(lang, "/servicios/ecommerce");
+  const contactoHref = activeHref(lang, "/contacto");
 
   return (
     <section
@@ -58,49 +64,49 @@ export default function HeroHome({ lang }: HeroHomeProps) {
 
           {/* ── CTA Desktop — dos botones lado a lado (ícono + texto horizontal) ── */}
           <div className="hidden sm:flex items-center gap-4">
-            <Link
-              href={`/${lang}/servicios/legal`}
-              className="flex items-center justify-center gap-2 px-7 py-3.5 bg-[#005697] text-white font-title font-bold text-[15px] rounded-[8px] hover:opacity-90 transition-opacity"
+            <AppLink
+              href={legalHref}
+              className={`flex items-center justify-center gap-2 px-7 py-3.5 bg-[#005697] text-white font-title font-bold text-[15px] rounded-[8px] transition-opacity ${legalHref ? "hover:opacity-90" : "opacity-50 cursor-default"}`}
             >
               <Scale size={18} aria-hidden="true" />
               {t("btn_legal")}
-            </Link>
-            <Link
-              href={`/${lang}/servicios/ecommerce`}
-              className="flex items-center justify-center gap-2 px-7 py-3.5 bg-commerce-green text-white font-title font-bold text-[15px] rounded-[8px] hover:opacity-90 transition-opacity"
+            </AppLink>
+            <AppLink
+              href={ecomHref}
+              className={`flex items-center justify-center gap-2 px-7 py-3.5 bg-commerce-green text-white font-title font-bold text-[15px] rounded-[8px] transition-opacity ${ecomHref ? "hover:opacity-90" : "opacity-50 cursor-default"}`}
             >
               <ShoppingCart size={18} aria-hidden="true" />
               {t("btn_ecom")}
-            </Link>
+            </AppLink>
           </div>
 
           {/* ── CTA Móvil — botón principal + fila de 2 botones secundarios ── */}
           <div className="flex sm:hidden flex-col items-center gap-3 w-full">
 
             {/* Botón principal "Agendar Cita" — ancho completo */}
-            <Link
-              href={`/${lang}/contacto`}
-              className="flex items-center justify-center w-full py-3.5 px-7 bg-primary text-white font-title font-bold text-[15px] rounded-[8px] hover:opacity-90 transition-opacity"
+            <AppLink
+              href={contactoHref}
+              className={`flex items-center justify-center w-full py-3.5 px-7 bg-primary text-white font-title font-bold text-[15px] rounded-[8px] transition-opacity ${contactoHref ? "hover:opacity-90" : "opacity-50 cursor-default"}`}
             >
               {tNav("cta")}
-            </Link>
+            </AppLink>
 
             {/* Botones secundarios — ícono arriba, texto abajo, lado a lado */}
             <div className="flex gap-2 w-full">
-              <Link
-                href={`/${lang}/servicios/legal`}
-                className="flex flex-col items-center justify-center gap-1 flex-1 py-2 px-3 bg-[#005697] text-white font-title font-bold text-[13px] rounded-[6px] hover:opacity-90 transition-opacity"
+              <AppLink
+                href={legalHref}
+                className={`flex flex-col items-center justify-center gap-1 flex-1 py-2 px-3 bg-[#005697] text-white font-title font-bold text-[13px] rounded-[6px] transition-opacity ${legalHref ? "hover:opacity-90" : "opacity-50 cursor-default"}`}
               >
                 <Scale size={18} aria-hidden="true" />
                 {t("btn_legal")}
-              </Link>
-              <Link
-                href={`/${lang}/servicios/ecommerce`}
-                className="flex flex-col items-center justify-center gap-1 flex-1 py-2 px-3 bg-commerce-green text-white font-title font-bold text-[13px] rounded-[6px] hover:opacity-90 transition-opacity"
+              </AppLink>
+              <AppLink
+                href={ecomHref}
+                className={`flex flex-col items-center justify-center gap-1 flex-1 py-2 px-3 bg-commerce-green text-white font-title font-bold text-[13px] rounded-[6px] transition-opacity ${ecomHref ? "hover:opacity-90" : "opacity-50 cursor-default"}`}
               >
                 <ShoppingCart size={18} aria-hidden="true" />
                 {t("btn_ecom")}
-              </Link>
+              </AppLink>
             </div>
 
           </div>

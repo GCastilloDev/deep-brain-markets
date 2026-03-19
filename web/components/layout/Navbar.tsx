@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { activeHref } from "@/lib/routes";
+import AppLink from "@/components/ui/AppLink";
 import LangSwitcher from "./LangSwitcher";
 import MobileMenu from "./MobileMenu";
 
@@ -14,21 +16,21 @@ interface NavbarProps {
 export default function Navbar({ lang }: NavbarProps) {
   const t = useTranslations("nav");
 
-  /* Lista de enlaces de navegación */
+  /* Lista de enlaces — href undefined si la ruta aún no está construida */
   const navItems = [
-    { label: t("home"),      href: `/${lang}` },
-    { label: t("about"),     href: `/${lang}/nosotros` },
-    { label: t("services"),  href: `/${lang}/servicios` },
-    { label: t("ecommerce"), href: `/${lang}/ecommerce` },
-    { label: t("blog"),      href: `/${lang}/blog` },
-    { label: t("contact"),   href: `/${lang}/contacto` },
+    { label: t("home"),      href: activeHref(lang, "/") },
+    { label: t("about"),     href: activeHref(lang, "/nosotros") },
+    { label: t("services"),  href: activeHref(lang, "/servicios") },
+    { label: t("ecommerce"), href: activeHref(lang, "/ecommerce") },
+    { label: t("blog"),      href: activeHref(lang, "/blog") },
+    { label: t("contact"),   href: activeHref(lang, "/contacto") },
   ];
 
   return (
     <header className="sticky top-0 z-30 w-full bg-white border-b border-border">
       <div className="flex items-center justify-between h-20 px-5 md:px-20 max-w-[1440px] mx-auto">
 
-        {/* Logo + nombre de marca */}
+        {/* Logo + nombre de marca — siempre apunta al inicio */}
         <Link
           href={`/${lang}`}
           className="flex items-center gap-3 shrink-0"
@@ -43,7 +45,7 @@ export default function Navbar({ lang }: NavbarProps) {
               priority
             />
           </div>
-          {/* Nombre de marca — 12px en móvil, 18px en desktop, siempre visible */}
+          {/* Nombre completo — 12px en móvil, 18px en desktop */}
           <span className="font-title font-bold text-[12px] sm:text-[18px] text-primary leading-none">
             DEEP BRAIN MARKETS
           </span>
@@ -53,13 +55,17 @@ export default function Navbar({ lang }: NavbarProps) {
         <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-8">
           <ul className="flex items-center gap-8">
             {navItems.map((item) => (
-              <li key={item.href}>
-                <Link
+              <li key={item.label}>
+                <AppLink
                   href={item.href}
-                  className="text-[15px] text-text-body font-normal hover:text-primary transition-colors"
+                  className={`text-[15px] font-normal transition-colors ${
+                    item.href
+                      ? "text-text-body hover:text-primary cursor-pointer"
+                      : "text-text-body opacity-50 cursor-default"
+                  }`}
                 >
                   {item.label}
-                </Link>
+                </AppLink>
               </li>
             ))}
           </ul>
@@ -68,18 +74,18 @@ export default function Navbar({ lang }: NavbarProps) {
         {/* Acciones del lado derecho — desktop */}
         <div className="hidden lg:flex items-center gap-4">
           <LangSwitcher />
-          <Link
-            href={`/${lang}/contacto`}
+          <AppLink
+            href={activeHref(lang, "/contacto")}
             className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-title font-semibold text-sm rounded-[8px] hover:opacity-90 transition-opacity"
           >
             {t("cta")}
-          </Link>
+          </AppLink>
         </div>
 
         {/* Menú hamburguesa — solo visible en móvil */}
         <div className="flex lg:hidden items-center gap-3">
           <LangSwitcher />
-          <MobileMenu items={navItems} cta={t("cta")} lang={lang} />
+          <MobileMenu items={navItems} cta={t("cta")} ctaHref={activeHref(lang, "/contacto")} lang={lang} />
         </div>
       </div>
     </header>

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import AppLink from "@/components/ui/AppLink";
+import { activeHref } from "@/lib/routes";
 
 interface FooterProps {
   lang: string;
@@ -17,25 +19,25 @@ export default function Footer({ lang }: FooterProps) {
     {
       title: t("services"),
       links: [
-        { label: t("legal_svc"),      href: `/${lang}/servicios/legal` },
-        { label: t("accounting_svc"), href: `/${lang}/servicios/contabilidad` },
-        { label: t("ecommerce_svc"),  href: `/${lang}/servicios/ecommerce` },
+        { label: t("legal_svc"),      href: activeHref(lang, "/servicios/legal") },
+        { label: t("accounting_svc"), href: activeHref(lang, "/servicios/contabilidad") },
+        { label: t("ecommerce_svc"),  href: activeHref(lang, "/servicios/ecommerce") },
       ],
     },
     {
       title: t("company"),
       links: [
-        { label: t("about"),   href: `/${lang}/nosotros` },
-        { label: t("blog"),    href: `/${lang}/blog` },
-        { label: t("contact"), href: `/${lang}/contacto` },
+        { label: t("about"),   href: activeHref(lang, "/nosotros") },
+        { label: t("blog"),    href: activeHref(lang, "/blog") },
+        { label: t("contact"), href: activeHref(lang, "/contacto") },
       ],
     },
   ];
 
   /* Columna legal — solo visible en desktop */
   const legalLinks = [
-    { label: t("privacy"), href: `/${lang}/privacidad` },
-    { label: t("terms"),   href: `/${lang}/terminos` },
+    { label: t("privacy"), href: activeHref(lang, "/privacidad") },
+    { label: t("terms"),   href: activeHref(lang, "/terminos") },
   ];
 
   return (
@@ -78,10 +80,17 @@ export default function Footer({ lang }: FooterProps) {
                 </h3>
                 <ul className="flex flex-col gap-3">
                   {col.links.map((link) => (
-                    <li key={link.href}>
-                      <Link href={link.href} className="text-[13px] text-text-secondary hover:text-primary transition-colors">
+                    <li key={link.label}>
+                      <AppLink
+                        href={link.href}
+                        className={`text-[13px] transition-colors ${
+                          link.href
+                            ? "text-text-secondary hover:text-primary cursor-pointer"
+                            : "text-text-secondary opacity-50 cursor-default"
+                        }`}
+                      >
                         {link.label}
-                      </Link>
+                      </AppLink>
                     </li>
                   ))}
                 </ul>
@@ -125,10 +134,17 @@ export default function Footer({ lang }: FooterProps) {
               </h3>
               <ul className="flex flex-col gap-3">
                 {col.links.map((link) => (
-                  <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-text-secondary hover:text-primary transition-colors">
+                  <li key={link.label}>
+                    <AppLink
+                      href={link.href}
+                      className={`text-sm transition-colors ${
+                        link.href
+                          ? "text-text-secondary hover:text-primary cursor-pointer"
+                          : "text-text-secondary opacity-50 cursor-default"
+                      }`}
+                    >
                       {link.label}
-                    </Link>
+                    </AppLink>
                   </li>
                 ))}
               </ul>
@@ -142,10 +158,17 @@ export default function Footer({ lang }: FooterProps) {
             </h3>
             <ul className="flex flex-col gap-3">
               {legalLinks.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-text-secondary hover:text-primary transition-colors">
+                <li key={link.label}>
+                  <AppLink
+                    href={link.href}
+                    className={`text-sm transition-colors ${
+                      link.href
+                        ? "text-text-secondary hover:text-primary cursor-pointer"
+                        : "text-text-secondary opacity-50 cursor-default"
+                    }`}
+                  >
                     {link.label}
-                  </Link>
+                  </AppLink>
                 </li>
               ))}
             </ul>
