@@ -2,7 +2,8 @@
    Las rutas no listadas se renderizan como texto sin enlace (no dan 404) */
 
 export const ACTIVE_ROUTES = new Set([
-  "/",       /* Página principal */
+  "/",                        /* Página principal */
+  "/servicios/legal-contable", /* Área Legal y Contable */
 ]);
 
 /* Retorna el href solo si la ruta está activa, undefined en caso contrario */
