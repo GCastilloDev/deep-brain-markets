@@ -6641,7 +6641,7 @@
               "fill": "#0D2847",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "Integración legal, contable y comercial para negocios globales",
+              "content": "Estrategia integral para mercados sin fronteras",
               "lineHeight": 1.2,
               "textAlign": "center",
               "fontFamily": "Montserrat",
@@ -6707,7 +6707,7 @@
               "fill": "#0D2847",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "Nuestros Servicios",
+              "content": "Nuestras Áreas de Expertise",
               "fontFamily": "Montserrat",
               "fontSize": 22,
               "fontWeight": "700"
@@ -6717,45 +6717,19 @@
               "id": "gXhz0",
               "name": "Card Legal",
               "width": "fill_container",
+              "fill": "#F8FAFC",
               "cornerRadius": 12,
               "stroke": {
                 "align": "inside",
-                "thickness": 1.5,
-                "fill": "#E5E7EB"
+                "thickness": {
+                  "top": 4
+                },
+                "fill": "#005697"
               },
               "layout": "vertical",
               "gap": 12,
               "padding": 20,
               "children": [
-                {
-                  "type": "frame",
-                  "id": "mAny6",
-                  "name": "Card1 Header",
-                  "gap": 12,
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "icon_font",
-                      "id": "VGweQ",
-                      "name": "Legal Icon",
-                      "width": 24,
-                      "height": 24,
-                      "iconFontName": "scale",
-                      "iconFontFamily": "lucide",
-                      "fill": "#1B4B8F"
-                    },
-                    {
-                      "type": "text",
-                      "id": "IXjAc",
-                      "name": "card1Title",
-                      "fill": "#0D2847",
-                      "content": "Asesoría Legal",
-                      "fontFamily": "Montserrat",
-                      "fontSize": 16,
-                      "fontWeight": "600"
-                    }
-                  ]
-                },
                 {
                   "type": "text",
                   "id": "TSTFr",
@@ -6763,11 +6737,23 @@
                   "fill": "#5A7499",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "Estructuración legal de empresas, contratos internacionales y cumplimiento normativo en múltiples jurisdicciones.",
+                  "content": "Soluciones robustas para el cumplimiento normativo, estructura fiscal y gestión contable de operaciones internacionales.",
                   "lineHeight": 1.5,
                   "fontFamily": "Open Sans",
                   "fontSize": 13,
                   "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "5cs2N",
+                  "name": "link1",
+                  "fill": "#005697",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ver todos los servicios legales →",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 13,
+                  "fontWeight": "600"
                 }
               ]
             },
@@ -6776,11 +6762,14 @@
               "id": "8NAuP",
               "name": "Card Contable",
               "width": "fill_container",
+              "fill": "#F8FAFC",
               "cornerRadius": 12,
               "stroke": {
                 "align": "inside",
-                "thickness": 1.5,
-                "fill": "#E5E7EB"
+                "thickness": {
+                  "top": 4
+                },
+                "fill": "#27AE60"
               },
               "layout": "vertical",
               "gap": 12,
@@ -6790,28 +6779,45 @@
                   "type": "frame",
                   "id": "GZZOq",
                   "name": "Card2 Header",
+                  "width": "fill_container",
+                  "fill": "#E8F5E9",
+                  "cornerRadius": 8,
                   "gap": 12,
+                  "padding": 8,
                   "alignItems": "center",
                   "children": [
                     {
                       "type": "icon_font",
                       "id": "yVnZ3",
                       "name": "Contable Icon",
-                      "width": 24,
-                      "height": 24,
+                      "width": 32,
+                      "height": 32,
                       "iconFontName": "calculator",
                       "iconFontFamily": "lucide",
-                      "fill": "#1B4B8F"
+                      "fill": "#FFFFFF"
                     },
                     {
                       "type": "text",
                       "id": "cadVM",
                       "name": "card2Title",
                       "fill": "#0D2847",
-                      "content": "Servicios Contables",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "DMB Comercio Exterior y Ecommerce",
                       "fontFamily": "Montserrat",
                       "fontSize": 16,
                       "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "p7crx",
+                      "name": "iconBox2",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "#27AE60",
+                      "cornerRadius": 6,
+                      "justifyContent": "center",
+                      "alignItems": "center"
                     }
                   ]
                 },
@@ -6822,11 +6828,23 @@
                   "fill": "#5A7499",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "Contabilidad internacional, reportes financieros y optimización fiscal para negocios con operaciones globales.",
+                  "content": "Estrategias para la expansión de mercados, logística internacional y posicionamiento en marketplaces globales.",
                   "lineHeight": 1.5,
                   "fontFamily": "Open Sans",
                   "fontSize": 13,
                   "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "KUyJu",
+                  "name": "link2",
+                  "fill": "#27AE60",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ver todos los servicios →",
+                  "fontFamily": "Open Sans",
+                  "fontSize": 13,
+                  "fontWeight": "600"
                 }
               ]
             }
