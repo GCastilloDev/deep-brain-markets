@@ -90,9 +90,9 @@ export default function ExpertiseSection({ lang }: ExpertiseSectionProps) {
             {/* Enlace "Ver todos" — separado por borde superior */}
             <div className="pt-5 border-t border-border mt-auto">
               <AppLink
-                href={activeHref(lang, "/servicios/legal")}
+                href={activeHref(lang, "/servicios/legal-contable")}
                 className={`font-title font-bold text-[13px] text-[#005697] transition-opacity ${
-                  activeHref(lang, "/servicios/legal") ? "hover:opacity-70" : "opacity-50 cursor-default"
+                  activeHref(lang, "/servicios/legal-contable") ? "hover:opacity-70" : "opacity-50 cursor-default"
                 }`}
               >
                 {t("card1_link")}

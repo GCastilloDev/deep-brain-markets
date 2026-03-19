@@ -16,7 +16,7 @@ export default function HeroHome({ lang }: HeroHomeProps) {
   const tNav = useTranslations("nav");
 
   /* Hrefs — undefined si la ruta aún no está construida */
-  const legalHref    = activeHref(lang, "/servicios/legal");
+  const legalHref    = activeHref(lang, "/servicios/legal-contable");
   const ecomHref     = activeHref(lang, "/servicios/ecommerce");
   const contactoHref = activeHref(lang, "/contacto");
 
