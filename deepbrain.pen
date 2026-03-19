@@ -4071,7 +4071,7 @@
                               "id": "IXdSk",
                               "name": "flogotxt",
                               "fill": "#005697",
-                              "content": "DEEP BRAIN",
+                              "content": "DEEP BRAIN MARKETS",
                               "fontFamily": "Montserrat",
                               "fontSize": 13,
                               "fontWeight": "700"
@@ -5265,7 +5265,7 @@
                           "id": "p8Rn7",
                           "name": "flogotxt",
                           "fill": "#005697",
-                          "content": "DEEP BRAIN",
+                          "content": "DEEP BRAIN MARKETS",
                           "fontFamily": "Montserrat",
                           "fontSize": 13,
                           "fontWeight": "700"
@@ -6331,7 +6331,7 @@
                   "id": "pBTrx",
                   "name": "fBrandTxt",
                   "fill": "#005697",
-                  "content": "DEEP BRAIN",
+                  "content": "DEEP BRAIN MARKETS",
                   "fontFamily": "Montserrat",
                   "fontSize": 13,
                   "fontWeight": "700"
@@ -6533,7 +6533,7 @@
                   "type": "text",
                   "id": "Twsar",
                   "name": "Brand",
-                  "fill": "#0D2847",
+                  "fill": "#005697",
                   "content": "DEEP BRAIN MARKETS",
                   "fontFamily": "Montserrat",
                   "fontSize": 12,
@@ -6615,6 +6615,11 @@
               "name": "Badge",
               "fill": "#DBEAFE",
               "cornerRadius": 8,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#BFDBFE"
+              },
               "gap": 6,
               "padding": [
                 6,
@@ -6625,12 +6630,12 @@
                   "type": "text",
                   "id": "JFy6s",
                   "name": "badgeText",
-                  "fill": "#1B4B8F",
+                  "fill": "#005697",
                   "content": "CONSULTORÍA DUAL",
                   "fontFamily": "Montserrat",
                   "fontSize": 11,
-                  "fontWeight": "600",
-                  "letterSpacing": 1
+                  "fontWeight": "700",
+                  "letterSpacing": 2
                 }
               ]
             },
@@ -6638,7 +6643,25 @@
               "type": "text",
               "id": "Bb7NW",
               "name": "H1",
-              "fill": "#0D2847",
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 270,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#005697",
+                    "position": 0
+                  },
+                  {
+                    "color": "#27AE60",
+                    "position": 1
+                  }
+                ]
+              },
               "textGrowth": "fixed-width",
               "width": "fill_container",
               "content": "Estrategia integral para mercados sin fronteras",
@@ -6652,10 +6675,10 @@
               "type": "text",
               "id": "rjXAx",
               "name": "Subtitle",
-              "fill": "#5A7499",
+              "fill": "#64748B",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "Soluciones integrales para empresas que operan en múltiples jurisdicciones con precisión y confianza.",
+              "content": "Unimos el rigor legal con la agilidad digital. Simplificamos la complejidad del comercio exterior y la gestión corporativa.",
               "lineHeight": 1.5,
               "textAlign": "center",
               "fontFamily": "Open Sans",
@@ -6664,24 +6687,114 @@
             },
             {
               "type": "frame",
-              "id": "J4q3j",
-              "name": "CTA Button",
+              "id": "wT9Fw",
+              "name": "mainCTA",
               "width": "fill_container",
-              "height": 48,
               "fill": "#1B4B8F",
               "cornerRadius": 8,
+              "padding": [
+                14,
+                28
+              ],
               "justifyContent": "center",
               "alignItems": "center",
               "children": [
                 {
                   "type": "text",
-                  "id": "zC6L1",
-                  "name": "ctaBtnText",
+                  "id": "OfbrV",
+                  "name": "ctaText",
                   "fill": "#FFFFFF",
                   "content": "Agendar Cita",
                   "fontFamily": "Montserrat",
                   "fontSize": 15,
-                  "fontWeight": "600"
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "8azKx",
+              "name": "secondaryCtaRow",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "eRqtQ",
+                  "name": "btnLegal2",
+                  "width": "fill_container",
+                  "fill": "#005697",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "l3NXa",
+                      "name": "iconLegal2",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "scale",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    },
+                    {
+                      "type": "text",
+                      "id": "0vxw0",
+                      "name": "textLegal2",
+                      "fill": "#FFFFFF",
+                      "content": "Servicios Legales",
+                      "fontFamily": "Montserrat",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ju71I",
+                  "name": "btnEcom2",
+                  "width": "fill_container",
+                  "fill": "#27AE60",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "v99ND",
+                      "name": "iconEcom2",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "shopping-cart",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dLQBP",
+                      "name": "textEcom2",
+                      "fill": "#FFFFFF",
+                      "content": "E-commerce Global",
+                      "fontFamily": "Montserrat",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
                 }
               ]
             }
@@ -6714,11 +6827,11 @@
             },
             {
               "type": "frame",
-              "id": "gXhz0",
-              "name": "Card Legal",
+              "id": "PDbBz",
+              "name": "card1Mobile",
               "width": "fill_container",
               "fill": "#F8FAFC",
-              "cornerRadius": 12,
+              "cornerRadius": 8,
               "stroke": {
                 "align": "inside",
                 "thickness": {
@@ -6727,43 +6840,261 @@
                 "fill": "#005697"
               },
               "layout": "vertical",
-              "gap": 12,
+              "gap": 16,
               "padding": 20,
               "children": [
                 {
+                  "type": "frame",
+                  "id": "OEETn",
+                  "name": "c1badge",
+                  "width": "fill_container",
+                  "justifyContent": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "HcpX2",
+                      "name": "c1icon",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#005697",
+                      "cornerRadius": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "YRToJ",
+                          "name": "c1iconEl",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "scale",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "text",
-                  "id": "TSTFr",
-                  "name": "card1Desc",
-                  "fill": "#5A7499",
+                  "id": "lJzmR",
+                  "name": "c1title",
+                  "fill": "#111827",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "DBM Legal y Contable",
+                  "fontFamily": "Montserrat",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "pFW4L",
+                  "name": "c1desc",
+                  "fill": "#64748B",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
                   "content": "Soluciones robustas para el cumplimiento normativo, estructura fiscal y gestión contable de operaciones internacionales.",
-                  "lineHeight": 1.5,
+                  "lineHeight": 1.6,
                   "fontFamily": "Open Sans",
                   "fontSize": 13,
                   "fontWeight": "normal"
                 },
                 {
-                  "type": "text",
-                  "id": "5cs2N",
-                  "name": "link1",
-                  "fill": "#005697",
-                  "textGrowth": "fixed-width",
+                  "type": "frame",
+                  "id": "H27Nj",
+                  "name": "c1services",
                   "width": "fill_container",
-                  "content": "Ver todos los servicios legales →",
-                  "fontFamily": "Open Sans",
-                  "fontSize": 13,
-                  "fontWeight": "600"
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "9YdF2",
+                      "name": "svc1",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "FbG0K",
+                          "name": "svc1icon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "landmark",
+                          "iconFontFamily": "lucide",
+                          "fill": "#005697"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "twYHS",
+                          "name": "svc1text",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "k2cRO",
+                              "name": "svc1title",
+                              "fill": "#1F2937",
+                              "content": "Derecho Fiscal y Tributario",
+                              "fontFamily": "Montserrat",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "QfZ2M",
+                              "name": "svc1desc",
+                              "fill": "#6B7280",
+                              "content": "Optimización fiscal y cumplimiento en aduanas.",
+                              "fontFamily": "Open Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "PVDlO",
+                      "name": "svc2",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "GHDC5",
+                          "name": "svc2icon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "building-2",
+                          "iconFontFamily": "lucide",
+                          "fill": "#005697"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ehr7m",
+                          "name": "svc2text",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "u7pko",
+                              "name": "svc2title",
+                              "fill": "#1F2937",
+                              "content": "Compliance Corporativo",
+                              "fontFamily": "Montserrat",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "aRQeE",
+                              "name": "svc2desc",
+                              "fill": "#6B7280",
+                              "content": "Auditoría y estructuración legal de empresas.",
+                              "fontFamily": "Open Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "u5iP4",
+                      "name": "svc3",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "jiMxR",
+                          "name": "svc3icon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "file-text",
+                          "iconFontFamily": "lucide",
+                          "fill": "#005697"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "tWn6N",
+                          "name": "svc3text",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "SndtR",
+                              "name": "svc3title",
+                              "fill": "#1F2937",
+                              "content": "Gestión Contable",
+                              "fontFamily": "Montserrat",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "RWj8n",
+                              "name": "svc3desc",
+                              "fill": "#6B7280",
+                              "content": "Contabilidad especializada para importadores.",
+                              "fontFamily": "Open Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "W6wMQ",
+                  "name": "c1footer",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#E5E7EB"
+                  },
+                  "layout": "vertical",
+                  "padding": [
+                    20,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "9lMRm",
+                      "name": "c1link",
+                      "fill": "#005697",
+                      "content": "Ver todos los servicios legales →",
+                      "fontFamily": "Montserrat",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
                 }
               ]
             },
             {
               "type": "frame",
-              "id": "8NAuP",
-              "name": "Card Contable",
+              "id": "bJpry",
+              "name": "card2Mobile",
               "width": "fill_container",
               "fill": "#F8FAFC",
-              "cornerRadius": 12,
+              "cornerRadius": 8,
               "stroke": {
                 "align": "inside",
                 "thickness": {
@@ -6772,79 +7103,251 @@
                 "fill": "#27AE60"
               },
               "layout": "vertical",
-              "gap": 12,
+              "gap": 16,
               "padding": 20,
               "children": [
                 {
                   "type": "frame",
-                  "id": "GZZOq",
-                  "name": "Card2 Header",
+                  "id": "Uz5xU",
+                  "name": "c2badge",
                   "width": "fill_container",
-                  "fill": "#E8F5E9",
-                  "cornerRadius": 8,
-                  "gap": 12,
-                  "padding": 8,
-                  "alignItems": "center",
+                  "justifyContent": "end",
                   "children": [
                     {
-                      "type": "icon_font",
-                      "id": "yVnZ3",
-                      "name": "Contable Icon",
-                      "width": 32,
-                      "height": 32,
-                      "iconFontName": "calculator",
-                      "iconFontFamily": "lucide",
-                      "fill": "#FFFFFF"
-                    },
-                    {
-                      "type": "text",
-                      "id": "cadVM",
-                      "name": "card2Title",
-                      "fill": "#0D2847",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "DMB Comercio Exterior y Ecommerce",
-                      "fontFamily": "Montserrat",
-                      "fontSize": 16,
-                      "fontWeight": "600"
-                    },
-                    {
                       "type": "frame",
-                      "id": "p7crx",
-                      "name": "iconBox2",
-                      "width": 40,
-                      "height": 40,
+                      "id": "Snpoi",
+                      "name": "c2icon",
+                      "width": 48,
+                      "height": 48,
                       "fill": "#27AE60",
-                      "cornerRadius": 6,
+                      "cornerRadius": 8,
                       "justifyContent": "center",
-                      "alignItems": "center"
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "TUuoO",
+                          "name": "c2iconEl",
+                          "width": 24,
+                          "height": 24,
+                          "iconFontName": "globe",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
                     }
                   ]
                 },
                 {
                   "type": "text",
-                  "id": "vSAZl",
-                  "name": "card2Desc",
-                  "fill": "#5A7499",
+                  "id": "7bBGm",
+                  "name": "c2title",
+                  "fill": "#111827",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "DMB Comercio Exterior y Ecommerce",
+                  "fontFamily": "Montserrat",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "WvkzD",
+                  "name": "c2desc",
+                  "fill": "#64748B",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
                   "content": "Estrategias para la expansión de mercados, logística internacional y posicionamiento en marketplaces globales.",
-                  "lineHeight": 1.5,
+                  "lineHeight": 1.6,
                   "fontFamily": "Open Sans",
                   "fontSize": 13,
                   "fontWeight": "normal"
                 },
                 {
-                  "type": "text",
-                  "id": "KUyJu",
-                  "name": "link2",
-                  "fill": "#27AE60",
-                  "textGrowth": "fixed-width",
+                  "type": "frame",
+                  "id": "aHU5Y",
+                  "name": "c2services",
                   "width": "fill_container",
-                  "content": "Ver todos los servicios →",
-                  "fontFamily": "Open Sans",
-                  "fontSize": 13,
-                  "fontWeight": "600"
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "AWwuh",
+                      "name": "csvc1",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "o44bu",
+                          "name": "csvc1icon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "truck",
+                          "iconFontFamily": "lucide",
+                          "fill": "#27AE60"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "lqLll",
+                          "name": "csvc1text",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "UJPj6",
+                              "name": "csvc1title",
+                              "fill": "#1F2937",
+                              "content": "Logística Global",
+                              "fontFamily": "Montserrat",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "hKyud",
+                              "name": "csvc1desc",
+                              "fill": "#6B7280",
+                              "content": "Coordinación de importación/exportación.",
+                              "fontFamily": "Open Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "QEosn",
+                      "name": "csvc2",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "yd6sk",
+                          "name": "csvc2icon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "store",
+                          "iconFontFamily": "lucide",
+                          "fill": "#27AE60"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "OMXnB",
+                          "name": "csvc2text",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "CLug4",
+                              "name": "csvc2title",
+                              "fill": "#1F2937",
+                              "content": "Marketplace Management",
+                              "fontFamily": "Montserrat",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "5h4bp",
+                              "name": "csvc2desc",
+                              "fill": "#6B7280",
+                              "content": "Gestión de Amazon, Mercado Libre y Alibaba.",
+                              "fontFamily": "Open Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "e8Fnz",
+                      "name": "csvc3",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "3bCOO",
+                          "name": "csvc3icon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "trending-up",
+                          "iconFontFamily": "lucide",
+                          "fill": "#27AE60"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "OFVWK",
+                          "name": "csvc3text",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Nx8z7",
+                              "name": "csvc3title",
+                              "fill": "#1F2937",
+                              "content": "Estrategia Digital",
+                              "fontFamily": "Montserrat",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "zBZ4h",
+                              "name": "csvc3desc",
+                              "fill": "#6B7280",
+                              "content": "Marketing orientado a conversión internacional.",
+                              "fontFamily": "Open Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AOctl",
+                  "name": "c2footer",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#E5E7EB"
+                  },
+                  "layout": "vertical",
+                  "padding": [
+                    20,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iIJIY",
+                      "name": "c2link",
+                      "fill": "#27AE60",
+                      "content": "Ver servicios de comercio →",
+                      "fontFamily": "Montserrat",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
                 }
               ]
             }
@@ -6855,11 +7358,11 @@
           "id": "pZBgi",
           "name": "Partners Strip",
           "width": "fill_container",
-          "fill": "#F8F9FA",
+          "fill": "#F1F5F9",
           "layout": "vertical",
           "gap": 16,
           "padding": [
-            32,
+            48,
             20
           ],
           "alignItems": "center",
@@ -6871,51 +7374,61 @@
               "fill": "#9CA3AF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "EMPRESAS QUE CONFÍAN EN NOSOTROS",
+              "content": "ALIADOS ESTRATÉGICOS",
               "textAlign": "center",
               "fontFamily": "Montserrat",
               "fontSize": 11,
               "fontWeight": "600",
-              "letterSpacing": 1
+              "letterSpacing": 3
             },
             {
               "type": "frame",
               "id": "5mhPF",
               "name": "Partners Row",
               "width": "fill_container",
-              "gap": 20,
+              "gap": 16,
               "justifyContent": "center",
               "alignItems": "center",
               "children": [
                 {
-                  "type": "text",
-                  "id": "x79By",
-                  "name": "p1",
-                  "fill": "#9CA3AF",
-                  "content": "Empresa A",
-                  "fontFamily": "Montserrat",
-                  "fontSize": 13,
-                  "fontWeight": "600"
+                  "type": "rectangle",
+                  "cornerRadius": 6,
+                  "id": "X75qH",
+                  "name": "pl1",
+                  "opacity": 0.5,
+                  "fill": "#D1D5DB",
+                  "width": "fill_container",
+                  "height": 32
                 },
                 {
-                  "type": "text",
-                  "id": "NlHq1",
-                  "name": "p2",
-                  "fill": "#9CA3AF",
-                  "content": "Empresa B",
-                  "fontFamily": "Montserrat",
-                  "fontSize": 13,
-                  "fontWeight": "600"
+                  "type": "rectangle",
+                  "cornerRadius": 6,
+                  "id": "1byjG",
+                  "name": "pl2",
+                  "opacity": 0.5,
+                  "fill": "#D1D5DB",
+                  "width": "fill_container",
+                  "height": 32
                 },
                 {
-                  "type": "text",
-                  "id": "OIUAk",
-                  "name": "p3",
-                  "fill": "#9CA3AF",
-                  "content": "Empresa C",
-                  "fontFamily": "Montserrat",
-                  "fontSize": 13,
-                  "fontWeight": "600"
+                  "type": "rectangle",
+                  "cornerRadius": 6,
+                  "id": "x10zO",
+                  "name": "pl3",
+                  "opacity": 0.5,
+                  "fill": "#D1D5DB",
+                  "width": "fill_container",
+                  "height": 32
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 6,
+                  "id": "ECyDD",
+                  "name": "pl4",
+                  "opacity": 0.5,
+                  "fill": "#D1D5DB",
+                  "width": "fill_container",
+                  "height": 32
                 }
               ]
             }
@@ -6923,7 +7436,7 @@
         },
         {
           "type": "frame",
-          "id": "EcIoj",
+          "id": "VsaUZ",
           "name": "Mobile Footer",
           "width": "fill_container",
           "fill": "#FFFFFF",
@@ -6935,70 +7448,109 @@
             "fill": "#E5E7EB"
           },
           "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            32,
+            20
+          ],
           "children": [
             {
               "type": "frame",
-              "id": "OhoNi",
-              "name": "Footer Inner",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 24,
-              "padding": [
-                32,
-                20
-              ],
+              "id": "zftX3",
+              "name": "fBrand",
+              "gap": 8,
+              "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "F3Tqj",
-                  "name": "Footer Brand",
+                  "id": "cnBCl",
+                  "name": "fLogo",
+                  "width": 28,
+                  "height": 28,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./logos/cropped-Logo-deep.png",
+                    "mode": "fit"
+                  },
+                  "cornerRadius": 4
+                },
+                {
+                  "type": "text",
+                  "id": "yc4CA",
+                  "name": "fBrandTxt",
+                  "fill": "#005697",
+                  "content": "DEEP BRAIN MARKETS",
+                  "fontFamily": "Montserrat",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "KMnbo",
+              "name": "fDesc",
+              "fill": "#6B7280",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Asesoría legal y comercial para un mundo conectado.",
+              "lineHeight": 1.6,
+              "fontFamily": "Open Sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "248z8",
+              "name": "fLinks",
+              "width": "fill_container",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "G3iPm",
+                  "name": "fCol1",
                   "width": "fill_container",
                   "layout": "vertical",
-                  "gap": 8,
+                  "gap": 12,
                   "children": [
                     {
-                      "type": "frame",
-                      "id": "RJY3m",
-                      "name": "Footer Logo Row",
-                      "gap": 8,
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "rectangle",
-                          "cornerRadius": 4,
-                          "id": "TE373",
-                          "name": "Footer Logo",
-                          "fill": {
-                            "type": "image",
-                            "enabled": true,
-                            "url": "./logos/cropped-Logo-deep.png",
-                            "mode": "fill"
-                          },
-                          "width": 28,
-                          "height": 28
-                        },
-                        {
-                          "type": "text",
-                          "id": "RcnPA",
-                          "name": "footerBrandName",
-                          "fill": "#0D2847",
-                          "content": "DEEP BRAIN MARKETS",
-                          "fontFamily": "Montserrat",
-                          "fontSize": 12,
-                          "fontWeight": "700",
-                          "letterSpacing": 0.5
-                        }
-                      ]
+                      "type": "text",
+                      "id": "9vO0z",
+                      "name": "fCol1h",
+                      "fill": "#111827",
+                      "content": "Servicios",
+                      "fontFamily": "Montserrat",
+                      "fontSize": 13,
+                      "fontWeight": "700"
                     },
                     {
                       "type": "text",
-                      "id": "hLU5c",
-                      "name": "footerTagline",
-                      "fill": "#5A7499",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "Inteligencia estratégica para negocios globales.",
-                      "lineHeight": 1.4,
+                      "id": "Z4cS1",
+                      "name": "fCol1l1",
+                      "fill": "#6B7280",
+                      "content": "Legal",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yZp8L",
+                      "name": "fCol1l2",
+                      "fill": "#6B7280",
+                      "content": "Contabilidad",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "iNS1f",
+                      "name": "fCol1l3",
+                      "fill": "#6B7280",
+                      "content": "E-commerce",
                       "fontFamily": "Open Sans",
                       "fontSize": 13,
                       "fontWeight": "normal"
@@ -7007,149 +7559,68 @@
                 },
                 {
                   "type": "frame",
-                  "id": "6z50W",
-                  "name": "Footer Links Grid",
+                  "id": "fqDYx",
+                  "name": "fCol2",
                   "width": "fill_container",
-                  "gap": 16,
+                  "layout": "vertical",
+                  "gap": 12,
                   "children": [
                     {
-                      "type": "frame",
-                      "id": "eapq0",
-                      "name": "Col Servicios",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 10,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "AAUIb",
-                          "name": "col1Title",
-                          "fill": "#0D2847",
-                          "content": "SERVICIOS",
-                          "fontFamily": "Montserrat",
-                          "fontSize": 12,
-                          "fontWeight": "600",
-                          "letterSpacing": 1
-                        },
-                        {
-                          "type": "text",
-                          "id": "N2uCV",
-                          "name": "svc1",
-                          "fill": "#5A7499",
-                          "content": "Asesoría Legal",
-                          "fontFamily": "Open Sans",
-                          "fontSize": 13,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "text",
-                          "id": "x7YNM",
-                          "name": "svc2",
-                          "fill": "#5A7499",
-                          "content": "Servicios Contables",
-                          "fontFamily": "Open Sans",
-                          "fontSize": 13,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "text",
-                          "id": "vl53E",
-                          "name": "svc3",
-                          "fill": "#5A7499",
-                          "content": "Consultoría Dual",
-                          "fontFamily": "Open Sans",
-                          "fontSize": 13,
-                          "fontWeight": "normal"
-                        }
-                      ]
+                      "type": "text",
+                      "id": "gzaGI",
+                      "name": "fCol2h",
+                      "fill": "#111827",
+                      "content": "Empresa",
+                      "fontFamily": "Montserrat",
+                      "fontSize": 13,
+                      "fontWeight": "700"
                     },
                     {
-                      "type": "frame",
-                      "id": "VfP2W",
-                      "name": "Col Empresa",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 10,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "3BsWn",
-                          "name": "col2Title",
-                          "fill": "#0D2847",
-                          "content": "EMPRESA",
-                          "fontFamily": "Montserrat",
-                          "fontSize": 12,
-                          "fontWeight": "600",
-                          "letterSpacing": 1
-                        },
-                        {
-                          "type": "text",
-                          "id": "6KFpL",
-                          "name": "emp1",
-                          "fill": "#5A7499",
-                          "content": "Sobre Nosotros",
-                          "fontFamily": "Open Sans",
-                          "fontSize": 13,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "text",
-                          "id": "M1wEM",
-                          "name": "emp2",
-                          "fill": "#5A7499",
-                          "content": "Contacto",
-                          "fontFamily": "Open Sans",
-                          "fontSize": 13,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "text",
-                          "id": "oMRhw",
-                          "name": "emp3",
-                          "fill": "#5A7499",
-                          "content": "Blog",
-                          "fontFamily": "Open Sans",
-                          "fontSize": 13,
-                          "fontWeight": "normal"
-                        }
-                      ]
+                      "type": "text",
+                      "id": "NHvrb",
+                      "name": "fCol2l1",
+                      "fill": "#6B7280",
+                      "content": "Nosotros",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "uPTay",
+                      "name": "fCol2l2",
+                      "fill": "#6B7280",
+                      "content": "Blog",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zHeAP",
+                      "name": "fCol2l3",
+                      "fill": "#6B7280",
+                      "content": "Contacto",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
               ]
             },
             {
-              "type": "frame",
-              "id": "gaTJ5",
-              "name": "Footer Bottom",
+              "type": "text",
+              "id": "cciTk",
+              "name": "fCopy",
+              "fill": "#9CA3AF",
+              "textGrowth": "fixed-width",
               "width": "fill_container",
-              "stroke": {
-                "align": "inside",
-                "thickness": {
-                  "top": 1
-                },
-                "fill": "#E5E7EB"
-              },
-              "padding": [
-                16,
-                20
-              ],
-              "justifyContent": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "byuvv",
-                  "name": "copyright",
-                  "fill": "#9CA3AF",
-                  "textGrowth": "fixed-width",
-                  "width": 335,
-                  "content": "© 2024 Deep Brain Markets. Todos los derechos reservados.",
-                  "textAlign": "center",
-                  "fontFamily": "Open Sans",
-                  "fontSize": 11,
-                  "fontWeight": "normal"
-                }
-              ]
+              "content": "© 2023 Deep Brain Markets. Todos los derechos reservados.",
+              "textAlign": "center",
+              "fontFamily": "Open Sans",
+              "fontSize": 11,
+              "fontWeight": "normal"
             }
           ]
         }
@@ -8172,7 +8643,7 @@
                               "id": "HVN4K",
                               "name": "flogotxt",
                               "fill": "#005697",
-                              "content": "DEEP BRAIN",
+                              "content": "DEEP BRAIN MARKETS",
                               "fontFamily": "Montserrat",
                               "fontSize": 13,
                               "fontWeight": "700"
@@ -9217,8 +9688,8 @@
         },
         {
           "type": "frame",
-          "id": "EvuRr",
-          "name": "MobileFooter",
+          "id": "FMNe2",
+          "name": "Mobile Footer",
           "width": "fill_container",
           "fill": "#FFFFFF",
           "stroke": {
@@ -9237,15 +9708,15 @@
           "children": [
             {
               "type": "frame",
-              "id": "3oToh",
-              "name": "mfBrand",
+              "id": "s77aa",
+              "name": "fBrand",
               "gap": 8,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "2Eh9h",
-                  "name": "mfLogo",
+                  "id": "OWXcu",
+                  "name": "fLogo",
                   "width": 28,
                   "height": 28,
                   "fill": {
@@ -9258,10 +9729,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "xQAHx",
-                  "name": "mfBrandTxt",
+                  "id": "zCxwO",
+                  "name": "fBrandTxt",
                   "fill": "#005697",
-                  "content": "DEEP BRAIN",
+                  "content": "DEEP BRAIN MARKETS",
                   "fontFamily": "Montserrat",
                   "fontSize": 13,
                   "fontWeight": "700"
@@ -9270,8 +9741,8 @@
             },
             {
               "type": "text",
-              "id": "CpdDS",
-              "name": "mfDesc",
+              "id": "AynPm",
+              "name": "fDesc",
               "fill": "#6B7280",
               "textGrowth": "fixed-width",
               "width": "fill_container",
@@ -9283,23 +9754,23 @@
             },
             {
               "type": "frame",
-              "id": "b7Ecx",
-              "name": "mfLinks",
+              "id": "RvHZd",
+              "name": "fLinks",
               "width": "fill_container",
               "gap": 32,
               "children": [
                 {
                   "type": "frame",
-                  "id": "kB71a",
-                  "name": "mfCol1",
+                  "id": "gC1n9",
+                  "name": "fCol1",
                   "width": "fill_container",
                   "layout": "vertical",
-                  "gap": 10,
+                  "gap": 12,
                   "children": [
                     {
                       "type": "text",
-                      "id": "X9Jsg",
-                      "name": "mfCol1h",
+                      "id": "annMw",
+                      "name": "fCol1h",
                       "fill": "#111827",
                       "content": "Servicios",
                       "fontFamily": "Montserrat",
@@ -9308,8 +9779,8 @@
                     },
                     {
                       "type": "text",
-                      "id": "4Cae6",
-                      "name": "mfCol1l1",
+                      "id": "3VUUB",
+                      "name": "fCol1l1",
                       "fill": "#6B7280",
                       "content": "Legal",
                       "fontFamily": "Open Sans",
@@ -9318,10 +9789,20 @@
                     },
                     {
                       "type": "text",
-                      "id": "R235j",
-                      "name": "mfCol1l2",
+                      "id": "OJ2pM",
+                      "name": "fCol1l2",
                       "fill": "#6B7280",
                       "content": "Contabilidad",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "iElHI",
+                      "name": "fCol1l3",
+                      "fill": "#6B7280",
+                      "content": "E-commerce",
                       "fontFamily": "Open Sans",
                       "fontSize": 13,
                       "fontWeight": "normal"
@@ -9330,16 +9811,16 @@
                 },
                 {
                   "type": "frame",
-                  "id": "4Nuwu",
-                  "name": "mfCol2",
+                  "id": "jPrvJ",
+                  "name": "fCol2",
                   "width": "fill_container",
                   "layout": "vertical",
-                  "gap": 10,
+                  "gap": 12,
                   "children": [
                     {
                       "type": "text",
-                      "id": "mm8nj",
-                      "name": "mfCol2h",
+                      "id": "XG3E2",
+                      "name": "fCol2h",
                       "fill": "#111827",
                       "content": "Empresa",
                       "fontFamily": "Montserrat",
@@ -9348,8 +9829,8 @@
                     },
                     {
                       "type": "text",
-                      "id": "rYFtg",
-                      "name": "mfCol2l1",
+                      "id": "p9MxQ",
+                      "name": "fCol2l1",
                       "fill": "#6B7280",
                       "content": "Nosotros",
                       "fontFamily": "Open Sans",
@@ -9358,8 +9839,18 @@
                     },
                     {
                       "type": "text",
-                      "id": "835CW",
-                      "name": "mfCol2l2",
+                      "id": "sqj9n",
+                      "name": "fCol2l2",
+                      "fill": "#6B7280",
+                      "content": "Blog",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "aWSn6",
+                      "name": "fCol2l3",
                       "fill": "#6B7280",
                       "content": "Contacto",
                       "fontFamily": "Open Sans",
@@ -9372,12 +9863,12 @@
             },
             {
               "type": "text",
-              "id": "JPMmM",
-              "name": "mfCopy",
+              "id": "xaOaC",
+              "name": "fCopy",
               "fill": "#9CA3AF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "© 2023 Deep Brain Markets.",
+              "content": "© 2023 Deep Brain Markets. Todos los derechos reservados.",
               "textAlign": "center",
               "fontFamily": "Open Sans",
               "fontSize": 11,
@@ -10221,8 +10712,8 @@
         },
         {
           "type": "frame",
-          "id": "mNjfa",
-          "name": "MobileFooter",
+          "id": "tqcJF",
+          "name": "footerAduanas",
           "width": "fill_container",
           "fill": "#FFFFFF",
           "stroke": {
@@ -10241,15 +10732,15 @@
           "children": [
             {
               "type": "frame",
-              "id": "tdyvb",
-              "name": "mfBrand",
+              "id": "euuBH",
+              "name": "fBrand",
               "gap": 8,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "S9qcP",
-                  "name": "mfLogo",
+                  "id": "uDjU4",
+                  "name": "fLogo",
                   "width": 28,
                   "height": 28,
                   "fill": {
@@ -10262,10 +10753,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "ImjvW",
-                  "name": "mfBrandTxt",
+                  "id": "z7vPu",
+                  "name": "fBrandTxt",
                   "fill": "#005697",
-                  "content": "DEEP BRAIN",
+                  "content": "DEEP BRAIN MARKETS",
                   "fontFamily": "Montserrat",
                   "fontSize": 13,
                   "fontWeight": "700"
@@ -10274,8 +10765,8 @@
             },
             {
               "type": "text",
-              "id": "k83x7",
-              "name": "mfDesc",
+              "id": "lqGnR",
+              "name": "fDesc",
               "fill": "#6B7280",
               "textGrowth": "fixed-width",
               "width": "fill_container",
@@ -10287,23 +10778,23 @@
             },
             {
               "type": "frame",
-              "id": "1RHkX",
-              "name": "mfLinks",
+              "id": "SMtg9",
+              "name": "fLinks",
               "width": "fill_container",
               "gap": 32,
               "children": [
                 {
                   "type": "frame",
-                  "id": "j7e9N",
-                  "name": "mfCol1",
+                  "id": "O24WM",
+                  "name": "fCol1",
                   "width": "fill_container",
                   "layout": "vertical",
-                  "gap": 10,
+                  "gap": 12,
                   "children": [
                     {
                       "type": "text",
-                      "id": "xUKww",
-                      "name": "mfCol1h",
+                      "id": "YgEz0",
+                      "name": "fCol1h",
                       "fill": "#111827",
                       "content": "Servicios",
                       "fontFamily": "Montserrat",
@@ -10312,8 +10803,8 @@
                     },
                     {
                       "type": "text",
-                      "id": "Etowa",
-                      "name": "mfCol1l1",
+                      "id": "ROPSW",
+                      "name": "fCol1l1",
                       "fill": "#6B7280",
                       "content": "Legal",
                       "fontFamily": "Open Sans",
@@ -10322,10 +10813,20 @@
                     },
                     {
                       "type": "text",
-                      "id": "L0VJY",
-                      "name": "mfCol1l2",
+                      "id": "u9mgR",
+                      "name": "fCol1l2",
                       "fill": "#6B7280",
                       "content": "Contabilidad",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "7Cwf8",
+                      "name": "fCol1l3",
+                      "fill": "#6B7280",
+                      "content": "E-commerce",
                       "fontFamily": "Open Sans",
                       "fontSize": 13,
                       "fontWeight": "normal"
@@ -10334,16 +10835,16 @@
                 },
                 {
                   "type": "frame",
-                  "id": "QpqTu",
-                  "name": "mfCol2",
+                  "id": "O3fO9",
+                  "name": "fCol2",
                   "width": "fill_container",
                   "layout": "vertical",
-                  "gap": 10,
+                  "gap": 12,
                   "children": [
                     {
                       "type": "text",
-                      "id": "VkCiE",
-                      "name": "mfCol2h",
+                      "id": "MF29B",
+                      "name": "fCol2h",
                       "fill": "#111827",
                       "content": "Empresa",
                       "fontFamily": "Montserrat",
@@ -10352,8 +10853,8 @@
                     },
                     {
                       "type": "text",
-                      "id": "NI24V",
-                      "name": "mfCol2l1",
+                      "id": "t91jH",
+                      "name": "fCol2l1",
                       "fill": "#6B7280",
                       "content": "Nosotros",
                       "fontFamily": "Open Sans",
@@ -10362,8 +10863,18 @@
                     },
                     {
                       "type": "text",
-                      "id": "1oKkD",
-                      "name": "mfCol2l2",
+                      "id": "yY7WW",
+                      "name": "fCol2l2",
+                      "fill": "#6B7280",
+                      "content": "Blog",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "RhaoF",
+                      "name": "fCol2l3",
                       "fill": "#6B7280",
                       "content": "Contacto",
                       "fontFamily": "Open Sans",
@@ -10376,12 +10887,12 @@
             },
             {
               "type": "text",
-              "id": "Mqsg2",
-              "name": "mfCopy",
+              "id": "ViCkG",
+              "name": "fCopy",
               "fill": "#9CA3AF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "© 2023 Deep Brain Markets.",
+              "content": "© 2023 Deep Brain Markets. Todos los derechos reservados.",
               "textAlign": "center",
               "fontFamily": "Open Sans",
               "fontSize": 11,
@@ -11408,7 +11919,7 @@
                               "id": "eVBvL",
                               "name": "flogotxt",
                               "fill": "#005697",
-                              "content": "DEEP BRAIN",
+                              "content": "DEEP BRAIN MARKETS",
                               "fontFamily": "Montserrat",
                               "fontSize": 13,
                               "fontWeight": "700"
@@ -12453,8 +12964,8 @@
         },
         {
           "type": "frame",
-          "id": "uD0Xj",
-          "name": "MobileFooter",
+          "id": "o1wU6",
+          "name": "footerMercantil",
           "width": "fill_container",
           "fill": "#FFFFFF",
           "stroke": {
@@ -12473,15 +12984,15 @@
           "children": [
             {
               "type": "frame",
-              "id": "GnZHh",
-              "name": "mfBrand",
+              "id": "aYDxz",
+              "name": "fBrand",
               "gap": 8,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "6vk5d",
-                  "name": "mfLogo",
+                  "id": "ysVDy",
+                  "name": "fLogo",
                   "width": 28,
                   "height": 28,
                   "fill": {
@@ -12494,10 +13005,10 @@
                 },
                 {
                   "type": "text",
-                  "id": "h12wg",
-                  "name": "mfBrandTxt",
+                  "id": "2GM6A",
+                  "name": "fBrandTxt",
                   "fill": "#005697",
-                  "content": "DEEP BRAIN",
+                  "content": "DEEP BRAIN MARKETS",
                   "fontFamily": "Montserrat",
                   "fontSize": 13,
                   "fontWeight": "700"
@@ -12506,8 +13017,8 @@
             },
             {
               "type": "text",
-              "id": "U8Qm9",
-              "name": "mfDesc",
+              "id": "i6OJZ",
+              "name": "fDesc",
               "fill": "#6B7280",
               "textGrowth": "fixed-width",
               "width": "fill_container",
@@ -12519,23 +13030,23 @@
             },
             {
               "type": "frame",
-              "id": "jT2gS",
-              "name": "mfLinks",
+              "id": "TqXVA",
+              "name": "fLinks",
               "width": "fill_container",
               "gap": 32,
               "children": [
                 {
                   "type": "frame",
-                  "id": "OGTWj",
-                  "name": "mfCol1",
+                  "id": "OEEw5",
+                  "name": "fCol1",
                   "width": "fill_container",
                   "layout": "vertical",
-                  "gap": 10,
+                  "gap": 12,
                   "children": [
                     {
                       "type": "text",
-                      "id": "o7q67",
-                      "name": "mfCol1h",
+                      "id": "vRt6j",
+                      "name": "fCol1h",
                       "fill": "#111827",
                       "content": "Servicios",
                       "fontFamily": "Montserrat",
@@ -12544,8 +13055,8 @@
                     },
                     {
                       "type": "text",
-                      "id": "xOL5g",
-                      "name": "mfCol1l1",
+                      "id": "pNujh",
+                      "name": "fCol1l1",
                       "fill": "#6B7280",
                       "content": "Legal",
                       "fontFamily": "Open Sans",
@@ -12554,10 +13065,20 @@
                     },
                     {
                       "type": "text",
-                      "id": "czZKx",
-                      "name": "mfCol1l2",
+                      "id": "kW36f",
+                      "name": "fCol1l2",
                       "fill": "#6B7280",
                       "content": "Contabilidad",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EACPY",
+                      "name": "fCol1l3",
+                      "fill": "#6B7280",
+                      "content": "E-commerce",
                       "fontFamily": "Open Sans",
                       "fontSize": 13,
                       "fontWeight": "normal"
@@ -12566,16 +13087,16 @@
                 },
                 {
                   "type": "frame",
-                  "id": "9DPFj",
-                  "name": "mfCol2",
+                  "id": "hffPv",
+                  "name": "fCol2",
                   "width": "fill_container",
                   "layout": "vertical",
-                  "gap": 10,
+                  "gap": 12,
                   "children": [
                     {
                       "type": "text",
-                      "id": "tvlsk",
-                      "name": "mfCol2h",
+                      "id": "12prn",
+                      "name": "fCol2h",
                       "fill": "#111827",
                       "content": "Empresa",
                       "fontFamily": "Montserrat",
@@ -12584,8 +13105,8 @@
                     },
                     {
                       "type": "text",
-                      "id": "E8gzs",
-                      "name": "mfCol2l1",
+                      "id": "nFF3z",
+                      "name": "fCol2l1",
                       "fill": "#6B7280",
                       "content": "Nosotros",
                       "fontFamily": "Open Sans",
@@ -12594,8 +13115,18 @@
                     },
                     {
                       "type": "text",
-                      "id": "gmI0H",
-                      "name": "mfCol2l2",
+                      "id": "Qpfnn",
+                      "name": "fCol2l2",
+                      "fill": "#6B7280",
+                      "content": "Blog",
+                      "fontFamily": "Open Sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3b4XS",
+                      "name": "fCol2l3",
                       "fill": "#6B7280",
                       "content": "Contacto",
                       "fontFamily": "Open Sans",
@@ -12608,12 +13139,12 @@
             },
             {
               "type": "text",
-              "id": "iL3PI",
-              "name": "mfCopy",
+              "id": "rRT2i",
+              "name": "fCopy",
               "fill": "#9CA3AF",
               "textGrowth": "fixed-width",
               "width": "fill_container",
-              "content": "© 2023 Deep Brain Markets.",
+              "content": "© 2023 Deep Brain Markets. Todos los derechos reservados.",
               "textAlign": "center",
               "fontFamily": "Open Sans",
               "fontSize": 11,
@@ -13640,7 +14171,7 @@
                               "id": "mJeQX",
                               "name": "flogotxt",
                               "fill": "#005697",
-                              "content": "DEEP BRAIN",
+                              "content": "DEEP BRAIN MARKETS",
                               "fontFamily": "Montserrat",
                               "fontSize": 13,
                               "fontWeight": "700"
