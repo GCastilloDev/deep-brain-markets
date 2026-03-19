@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Scale, ShoppingCart } from "lucide-react";
 import AppLink from "@/components/ui/AppLink";
 import { activeHref } from "@/lib/routes";
+import { whatsappHref } from "@/lib/whatsapp";
 
 interface HeroHomeProps {
   lang: string;
@@ -18,7 +19,8 @@ export default function HeroHome({ lang }: HeroHomeProps) {
   /* Hrefs — undefined si la ruta aún no está construida */
   const legalHref    = activeHref(lang, "/servicios/legal-contable");
   const ecomHref     = activeHref(lang, "/servicios/ecommerce");
-  const contactoHref = activeHref(lang, "/contacto");
+  /* WhatsApp — siempre activo, mensaje de agendar cita */
+  const ctaWaHref    = whatsappHref(tNav("cta_msg"));
 
   return (
     <section
@@ -83,13 +85,15 @@ export default function HeroHome({ lang }: HeroHomeProps) {
           {/* ── CTA Móvil — botón principal + fila de 2 botones secundarios ── */}
           <div className="flex sm:hidden flex-col items-center gap-3 w-full">
 
-            {/* Botón principal "Agendar Cita" — ancho completo */}
-            <AppLink
-              href={contactoHref}
-              className={`flex items-center justify-center w-full py-3.5 px-7 bg-primary text-white font-title font-bold text-[15px] rounded-[8px] transition-opacity ${contactoHref ? "hover:opacity-90" : "opacity-50 cursor-default"}`}
+            {/* Botón principal "Agendar Cita" — ancho completo, abre WhatsApp */}
+            <a
+              href={ctaWaHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-full py-3.5 px-7 bg-primary text-white font-title font-bold text-[15px] rounded-[8px] hover:opacity-90 transition-opacity"
             >
               {tNav("cta")}
-            </AppLink>
+            </a>
 
             {/* Botones secundarios — ícono arriba, texto abajo, lado a lado */}
             <div className="flex gap-2 w-full">

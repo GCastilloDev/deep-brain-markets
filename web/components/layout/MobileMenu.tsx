@@ -90,12 +90,24 @@ export default function MobileMenu({ items, cta, ctaHref, lang }: MobileMenuProp
         {/* Botón CTA — ancho contenido, no ocupa toda la pantalla */}
         <div className="px-5 py-4">
           {ctaHref ? (
-            <Link
-              href={ctaHref}
-              className="inline-flex items-center justify-center w-full max-w-xs h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] transition-opacity hover:opacity-90"
-            >
-              {cta}
-            </Link>
+            /* Link externo (WhatsApp) → <a>, link interno → <Link> */
+            ctaHref.startsWith("http") ? (
+              <a
+                href={ctaHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full max-w-xs h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] transition-opacity hover:opacity-90"
+              >
+                {cta}
+              </a>
+            ) : (
+              <Link
+                href={ctaHref}
+                className="inline-flex items-center justify-center w-full max-w-xs h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] transition-opacity hover:opacity-90"
+              >
+                {cta}
+              </Link>
+            )
           ) : (
             <span className="inline-flex items-center justify-center w-full max-w-xs h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] opacity-50 cursor-default">
               {cta}

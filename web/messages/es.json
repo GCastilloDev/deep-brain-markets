@@ -6,7 +6,8 @@
     "ecommerce": "E-commerce",
     "blog": "Blog",
     "contact": "Contacto",
-    "cta": "Agendar Cita"
+    "cta": "Agendar Cita",
+    "cta_msg": "Hola, me gustaría agendar una cita con Deep Brain Markets."
   },
   "hero": {
     "badge": "CONSULTORÍA DUAL",
@@ -46,6 +47,31 @@
     "submit": "Enviar mensaje",
     "success": "Mensaje enviado correctamente",
     "error": "Hubo un error, intenta de nuevo"
+  },
+  "aduanas_page": {
+    "meta_title": "Aduanas y Comercio Exterior en México | Deep Brain Markets",
+    "meta_description": "Consultoría aduanera preventiva, defensa legal PAMA y logística internacional. Expertos en comercio exterior para importadores y exportadores en México.",
+    "breadcrumb_home": "Inicio",
+    "breadcrumb_legal": "Legal & Contable",
+    "breadcrumb_current": "Aduanas y Comercio Exterior",
+    "h1": "Comercio Exterior sin Fronteras, Tranquilidad Ilimitada.",
+    "subtitle": "En DeepBrain Markets, no solo gestionamos trámites; diseñamos estrategias aduaneras a su medida. Garantizamos la continuidad de su operación global, minimizando riesgos y maximizando la eficiencia en cada paso de su mercancía.",
+    "solutions_label": "NUESTRAS SOLUCIONES",
+    "solutions_title": "Soluciones Legales Especializadas",
+    "card1_title": "Consultoría Aduanera Preventiva",
+    "card1_desc": "Vaya un paso adelante. Le asesoramos en la clasificación arancelaria correcta y el cumplimiento de regulaciones para evitar costosos retrasos, multas o el rechazo de su mercancía en aduana.",
+    "card2_title": "Defensa Legal y Procedimientos (PAMA)",
+    "card2_desc": "Protegemos su inversión. Contamos con amplia experiencia en la defensa ante el Procedimiento Administrativo en Materia Aduanera (PAMA). Actuamos con rapidez y firmeza para levantar embargos y resolver controversias.",
+    "card3_title": "Logística Internacional y Derecho Marítimo",
+    "card3_desc": "Su operación portuaria con respaldo legal. Brindamos soporte jurídico a agentes navieros y operadores logísticos en contratos de fletamento, seguros de carga y gestión de siniestros.",
+    "benefits_title": "Beneficios Clave",
+    "benefit1_title": "Escale su Negocio con Confianza",
+    "benefit1_desc": "Una estructura legal robusta es el único camino para un crecimiento sostenible. Le preparamos para recibir inversión, expandirse y perdurar en el tiempo.",
+    "quote": "\"La precisión técnica en comercio exterior es la diferencia entre el éxito logístico y un costo inesperado.\"",
+    "cta_h2": "¿Está listo para dar el siguiente paso?",
+    "cta_sub": "No deje la salud legal de su empresa al azar. Solicite una consultoría con nuestros especialistas.",
+    "cta_btn": "Consultar con un Especialista",
+    "cta_specialist_msg": "Hola, me gustaría consultar con un especialista en Aduanas y Comercio Exterior de Deep Brain Markets."
   },
   "legal_page": {
     "meta_title": "Asesoría Legal y Contable en México | Deep Brain Markets",

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { activeHref } from "@/lib/routes";
+import { whatsappHref } from "@/lib/whatsapp";
 import AppLink from "@/components/ui/AppLink";
 import LangSwitcher from "./LangSwitcher";
 import MobileMenu from "./MobileMenu";
@@ -74,18 +75,20 @@ export default function Navbar({ lang }: NavbarProps) {
         {/* Acciones del lado derecho — desktop */}
         <div className="hidden lg:flex items-center gap-4">
           <LangSwitcher />
-          <AppLink
-            href={activeHref(lang, "/contacto")}
+          <a
+            href={whatsappHref(t("cta_msg"))}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-title font-semibold text-sm rounded-[8px] hover:opacity-90 transition-opacity"
           >
             {t("cta")}
-          </AppLink>
+          </a>
         </div>
 
         {/* Menú hamburguesa — solo visible en móvil */}
         <div className="flex lg:hidden items-center gap-3">
           <LangSwitcher />
-          <MobileMenu items={navItems} cta={t("cta")} ctaHref={activeHref(lang, "/contacto")} lang={lang} />
+          <MobileMenu items={navItems} cta={t("cta")} ctaHref={whatsappHref(t("cta_msg"))} lang={lang} />
         </div>
       </div>
     </header>

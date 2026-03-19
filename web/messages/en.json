@@ -6,7 +6,8 @@
     "ecommerce": "E-commerce",
     "blog": "Blog",
     "contact": "Contact",
-    "cta": "Schedule a Meeting"
+    "cta": "Schedule a Meeting",
+    "cta_msg": "Hello, I'd like to schedule a meeting with Deep Brain Markets."
   },
   "hero": {
     "badge": "DUAL ADVISORY",
@@ -46,6 +47,31 @@
     "submit": "Send message",
     "success": "Message sent successfully",
     "error": "Something went wrong, please try again"
+  },
+  "aduanas_page": {
+    "meta_title": "Customs & Foreign Trade in Mexico | Deep Brain Markets",
+    "meta_description": "Preventive customs advisory, PAMA legal defense and international logistics. Foreign trade experts for importers and exporters in Mexico.",
+    "breadcrumb_home": "Home",
+    "breadcrumb_legal": "Legal & Accounting",
+    "breadcrumb_current": "Customs & Foreign Trade",
+    "h1": "Cross-Border Trade Without Limits, Unlimited Peace of Mind.",
+    "subtitle": "At DeepBrain Markets, we don't just handle paperwork; we design customs strategies tailored to your needs. We guarantee the continuity of your global operations, minimizing risks and maximizing efficiency at every step.",
+    "solutions_label": "OUR SOLUTIONS",
+    "solutions_title": "Specialized Legal Solutions",
+    "card1_title": "Preventive Customs Advisory",
+    "card1_desc": "Stay one step ahead. We advise on correct tariff classification and regulatory compliance to avoid costly delays, fines, or rejection of your goods at customs.",
+    "card2_title": "Legal Defense & Proceedings (PAMA)",
+    "card2_desc": "We protect your investment. We have extensive experience defending against Administrative Customs Proceedings (PAMA). We act swiftly and firmly to lift embargos and resolve disputes.",
+    "card3_title": "International Logistics & Maritime Law",
+    "card3_desc": "Port operations with legal backing. We provide legal support to shipping agents and logistics operators in charter contracts, cargo insurance, and claims management.",
+    "benefits_title": "Key Benefits",
+    "benefit1_title": "Scale Your Business with Confidence",
+    "benefit1_desc": "A robust legal structure is the only path to sustainable growth. We prepare you to attract investment, expand, and endure over time.",
+    "quote": "\"Technical precision in foreign trade is the difference between logistical success and an unexpected cost.\"",
+    "cta_h2": "Ready to Take the Next Step?",
+    "cta_sub": "Don't leave your company's legal health to chance. Request a consultation with our specialists.",
+    "cta_btn": "Consult a Specialist",
+    "cta_specialist_msg": "Hello, I'd like to consult with a specialist in Customs & Foreign Trade at Deep Brain Markets."
   },
   "legal_page": {
     "meta_title": "Legal & Accounting Advisory in Mexico | Deep Brain Markets",

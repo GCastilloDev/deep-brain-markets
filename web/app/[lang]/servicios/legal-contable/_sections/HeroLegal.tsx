@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { whatsappHref } from "@/lib/whatsapp";
 
 interface HeroLegalProps {
   lang: string;
@@ -48,13 +48,15 @@ export default function HeroLegal({ lang }: HeroLegalProps) {
           {t("subtitle")}
         </p>
 
-        {/* Botón CTA — solo visible en móvil */}
-        <Link
-          href={`/${lang}/contacto`}
+        {/* Botón CTA — solo visible en móvil, abre WhatsApp */}
+        <a
+          href={whatsappHref(tNav("cta_msg"))}
+          target="_blank"
+          rel="noopener noreferrer"
           className="sm:hidden flex items-center justify-center w-full py-3.5 bg-[#1B4B8F] text-white font-title font-semibold text-[15px] rounded-[8px] hover:opacity-90 transition-opacity"
         >
           {tNav("cta")}
-        </Link>
+        </a>
 
       </div>
     </section>
