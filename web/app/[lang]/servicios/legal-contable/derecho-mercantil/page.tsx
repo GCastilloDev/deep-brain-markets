@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
-import { Globe, Globe2, Gavel, Anchor, TrendingUp, ArrowRight } from "lucide-react";
+import { Building2, Gavel, Handshake, ShieldCheck, Globe, CircleCheck, ArrowRight } from "lucide-react";
 import { whatsappHref } from "@/lib/whatsapp";
 
-/* Pre-renderiza la página para cada idioma en build time (SSG) */
+/* Pre-renderiza para cada idioma en build time (SSG) */
 export function generateStaticParams() {
   return [{ lang: "es" }, { lang: "en" }];
 }
@@ -16,28 +16,28 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  const t = await getTranslations({ locale: lang, namespace: "aduanas_page" });
+  const t = await getTranslations({ locale: lang, namespace: "mercantil_page" });
 
   return {
     title: t("meta_title"),
     description: t("meta_description"),
     alternates: {
-      canonical: `/${lang}/servicios/legal-contable/aduanas-comercio-exterior`,
+      canonical: `/${lang}/servicios/legal-contable/derecho-mercantil`,
       languages: {
-        es: "/es/servicios/legal-contable/aduanas-comercio-exterior",
-        en: "/en/servicios/legal-contable/aduanas-comercio-exterior",
+        es: "/es/servicios/legal-contable/derecho-mercantil",
+        en: "/en/servicios/legal-contable/derecho-mercantil",
       },
     },
   };
 }
 
-/* Datos estructurados JSON-LD para el servicio de aduanas */
+/* Datos estructurados JSON-LD para el servicio */
 function JsonLd({ lang }: { lang: string }) {
   const baseUrl = "https://deepbrainmarkets.com";
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: lang === "es" ? "Aduanas y Comercio Exterior" : "Customs & Foreign Trade",
+    name: lang === "es" ? "Derecho Mercantil y Corporativo" : "Corporate & Commercial Law",
     provider: {
       "@type": "Organization",
       name: "Deep Brain Markets",
@@ -45,9 +45,9 @@ function JsonLd({ lang }: { lang: string }) {
     },
     areaServed: "MX",
     serviceType: lang === "es"
-      ? ["Consultoría Aduanera", "Defensa PAMA", "Logística Internacional", "Derecho Marítimo"]
-      : ["Customs Advisory", "PAMA Defense", "International Logistics", "Maritime Law"],
-    url: `${baseUrl}/${lang}/servicios/legal-contable/aduanas-comercio-exterior`,
+      ? ["Constitución de Empresas", "Gobierno Corporativo", "Compliance", "Contratos Comerciales"]
+      : ["Company Formation", "Corporate Governance", "Compliance", "Commercial Contracts"],
+    url: `${baseUrl}/${lang}/servicios/legal-contable/derecho-mercantil`,
   };
 
   return (
@@ -58,7 +58,7 @@ function JsonLd({ lang }: { lang: string }) {
   );
 }
 
-export default async function AduanasPage({
+export default async function DerechoMercantilPage({
   params,
 }: {
   params: Promise<{ lang: string }>;
@@ -66,14 +66,22 @@ export default async function AduanasPage({
   const { lang } = await params;
   /* Habilita SSG para este idioma */
   setRequestLocale(lang);
-  const t = await getTranslations({ locale: lang, namespace: "aduanas_page" });
+
+  const t = await getTranslations({ locale: lang, namespace: "mercantil_page" });
   const tNav = await getTranslations({ locale: lang, namespace: "nav" });
 
-  /* Servicios principales */
+  /* Servicios principales de la columna izquierda */
   const services = [
-    { icon: <Globe size={24} aria-hidden="true" />, title: t("card1_title"), desc: t("card1_desc") },
+    { icon: <Building2 size={24} aria-hidden="true" />, title: t("card1_title"), desc: t("card1_desc") },
     { icon: <Gavel size={24} aria-hidden="true" />, title: t("card2_title"), desc: t("card2_desc") },
-    { icon: <Anchor size={24} aria-hidden="true" />, title: t("card3_title"), desc: t("card3_desc") },
+    { icon: <Handshake size={24} aria-hidden="true" />, title: t("card3_title"), desc: t("card3_desc") },
+  ];
+
+  /* Beneficios del sidebar */
+  const benefits = [
+    { icon: <ShieldCheck size={14} aria-hidden="true" />, title: t("benefit1_title"), desc: t("benefit1_desc") },
+    { icon: <Globe size={14} aria-hidden="true" />, title: t("benefit2_title"), desc: t("benefit2_desc") },
+    { icon: <CircleCheck size={14} aria-hidden="true" />, title: t("benefit3_title"), desc: t("benefit3_desc") },
   ];
 
   return (
@@ -88,7 +96,7 @@ export default async function AduanasPage({
           className="hidden md:block absolute right-10 top-5 text-[#1B4B8F] opacity-[0.05] pointer-events-none"
           aria-hidden="true"
         >
-          <Globe2 size={380} strokeWidth={0.5} />
+          <Building2 size={380} strokeWidth={0.5} />
         </div>
 
         <div className="relative px-5 md:px-20 pt-8 pb-10 md:pt-16 md:pb-16 max-w-[1440px] mx-auto flex flex-col gap-4 md:gap-5">
@@ -122,7 +130,7 @@ export default async function AduanasPage({
             {t("subtitle")}
           </p>
 
-          {/* CTA móvil — abre WhatsApp con mensaje de agendar cita */}
+          {/* CTA móvil */}
           <a
             href={whatsappHref(tNav("cta_msg"))}
             target="_blank"
@@ -151,11 +159,9 @@ export default async function AduanasPage({
               {services.map((svc) => (
                 <li key={svc.title}>
                   <article className="flex gap-4 md:gap-5 bg-white rounded-[12px] p-5 md:p-6 border border-[#E5E7EB]">
-                    {/* Ícono */}
                     <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-[#EBF2FA] rounded-[8px] shrink-0 text-[#1B4B8F]">
                       {svc.icon}
                     </div>
-                    {/* Texto */}
                     <div className="flex flex-col gap-2">
                       <h3 className="font-title font-bold text-[15px] md:text-[17px] text-[#0D2847]">
                         {svc.title}
@@ -178,20 +184,22 @@ export default async function AduanasPage({
                 {t("benefits_title")}
               </h2>
 
-              {/* Beneficio */}
-              <div className="flex gap-3">
-                <div className="flex items-center justify-center w-7 h-7 bg-[#1B4B8F] rounded-full shrink-0 mt-0.5">
-                  <TrendingUp size={14} className="text-white" aria-hidden="true" />
+              {/* Lista de beneficios */}
+              {benefits.map((b) => (
+                <div key={b.title} className="flex gap-3">
+                  <div className="flex items-center justify-center w-7 h-7 bg-[#1B4B8F] rounded-full shrink-0 mt-0.5 text-white">
+                    {b.icon}
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="font-title font-bold text-[11px] md:text-[12px] text-[#0D2847] tracking-wide">
+                      {b.title}
+                    </span>
+                    <span className="font-body text-[12px] md:text-[13px] text-[#5A7499] leading-relaxed">
+                      {b.desc}
+                    </span>
+                  </div>
                 </div>
-                <div className="flex flex-col gap-1">
-                  <span className="font-title font-semibold text-[13px] md:text-[14px] text-[#0D2847]">
-                    {t("benefit1_title")}
-                  </span>
-                  <span className="font-body text-[12px] md:text-[13px] text-[#5A7499] leading-relaxed">
-                    {t("benefit1_desc")}
-                  </span>
-                </div>
-              </div>
+              ))}
 
               {/* Cita */}
               <blockquote className="bg-white rounded-[8px] p-4">
@@ -214,7 +222,6 @@ export default async function AduanasPage({
           <p className="font-body text-[14px] md:text-[17px] text-[#5A7499] leading-relaxed md:max-w-[620px]">
             {t("cta_sub")}
           </p>
-          {/* Botón especialista — WhatsApp con mensaje específico del área */}
           <a
             href={whatsappHref(t("cta_specialist_msg"))}
             target="_blank"
