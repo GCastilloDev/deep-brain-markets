@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Open_Sans } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Navbar from "@/components/layout/Navbar";
@@ -43,6 +43,9 @@ export default async function LangLayout({
   if (!routing.locales.includes(lang as "es" | "en")) {
     notFound();
   }
+
+  /* Habilita SSG indicando el locale antes de cualquier traducción */
+  setRequestLocale(lang);
 
   /* Carga las traducciones del idioma activo */
   const messages = await getMessages();

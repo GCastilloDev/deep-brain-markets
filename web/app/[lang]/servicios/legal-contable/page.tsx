@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import HeroLegal from "./_sections/HeroLegal";
 import ServicesGrid from "./_sections/ServicesGrid";
+
+/* Pre-renderiza la página para cada idioma en build time (SSG) */
+export function generateStaticParams() {
+  return [{ lang: "es" }, { lang: "en" }];
+}
 
 /* Genera el metadata SEO dinámicamente según el idioma */
 export async function generateMetadata({
@@ -60,6 +65,8 @@ export default async function LegalContablePage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  /* Habilita SSG para este idioma */
+  setRequestLocale(lang);
 
   return (
     <>

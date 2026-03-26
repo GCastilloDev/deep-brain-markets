@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 import { Globe, Globe2, Gavel, Anchor, TrendingUp, ArrowRight } from "lucide-react";
 import { whatsappHref } from "@/lib/whatsapp";
+
+/* Pre-renderiza la página para cada idioma en build time (SSG) */
+export function generateStaticParams() {
+  return [{ lang: "es" }, { lang: "en" }];
+}
 
 /* Genera el metadata SEO dinámicamente según el idioma */
 export async function generateMetadata({
@@ -59,6 +64,8 @@ export default async function AduanasPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  /* Habilita SSG para este idioma */
+  setRequestLocale(lang);
   const t = await getTranslations({ locale: lang, namespace: "aduanas_page" });
   const tNav = await getTranslations({ locale: lang, namespace: "nav" });
 

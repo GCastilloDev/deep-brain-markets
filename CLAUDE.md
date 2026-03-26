@@ -56,6 +56,12 @@ This repository contains the design file (`deepbrain.pen`) and the web project (
 - **cornerRadius**: always `8` for buttons, badges, and chips. Never use `9999` (pill/oval shape).
 - **Mobile versions**: every design must have a mobile version at 375px width, created alongside the desktop version.
 
+### SSG (Static Site Generation) — non-negotiable
+- Every page must export `generateStaticParams` returning `[{ lang: "es" }, { lang: "en" }]`
+- This pre-renders all pages at build time and serves them from Vercel's CDN edge — faster and better for SEO
+- Exception: pages with truly dynamic data (e.g. blog post comments) use ISR (`revalidate`) instead
+- Blog post pages use `generateStaticParams` with the known slugs + ISR revalidation on comment approval
+
 ### Route Management
 
 - Active routes are defined in `web/lib/routes.ts` — `ACTIVE_ROUTES` Set + `activeHref(lang, path)` utility
