@@ -74,7 +74,7 @@ export default function CommentForm({ postSlug, postLang }: CommentFormProps) {
         <h4 className="font-title font-bold text-[16px] md:text-[18px] text-text-primary">
           {t("success_title")}
         </h4>
-        <p className="font-body text-[13px] md:text-[14px] text-text-secondary text-center w-full max-w-md">
+        <p className="font-body text-[13px] md:text-[14px] text-text-secondary text-center max-w-[400px] leading-relaxed">
           {t("success_msg")}
         </p>
         <button
