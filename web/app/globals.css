@@ -1,59 +1,72 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* ─── Tokens del Design System de Deep Brain Markets ─────────────────────── */
 /* Todos los valores vienen directamente del archivo deepbrain.pen            */
 
 @theme {
   /* --- Colores ------------------------------------------------------------ */
-  --color-primary:          #1B4B8F; /* Azul principal de marca               */
-  --color-legal-dark:       #0D2847; /* Azul oscuro — textos y footer         */
-  --color-commerce-green:   #27AE60; /* Verde — área de ecommerce             */
-  --color-accent-green:     #52BE80; /* Verde claro — acentos                 */
+  --color-primary: #1b4b8f; /* Azul principal de marca               */
+  --color-legal-dark: #0d2847; /* Azul oscuro — textos y footer         */
+  --color-commerce-green: #27ae60; /* Verde — área de ecommerce             */
+  --color-accent-green: #52be80; /* Verde claro — acentos                 */
 
   /* Fondos */
-  --color-bg:               #F5F7FA; /* Fondo general del sitio               */
-  --color-bg-neutral:       #F8F9FA; /* Fondo neutro — secciones alternas     */
-  --color-bg-soft-blue:     #EBF2FA; /* Fondo azul suave — highlights         */
-  --color-white:            #FFFFFF;
+  --color-bg: #f5f7fa; /* Fondo general del sitio               */
+  --color-bg-neutral: #f8f9fa; /* Fondo neutro — secciones alternas     */
+  --color-bg-soft-blue: #ebf2fa; /* Fondo azul suave — highlights         */
+  --color-white: #ffffff;
 
   /* Textos */
-  --color-text-primary:     #0D2847; /* Texto principal — títulos             */
-  --color-text-body:        #2C3E50; /* Texto cuerpo — párrafos               */
-  --color-text-secondary:   #5A7499; /* Texto secundario — subtítulos         */
-  --color-text-service:     #1B4B8F; /* Texto azul — etiquetas de servicio    */
-  --color-text-white:       #FFFFFF;
-  --color-placeholder:      #9CA3AF; /* Color placeholder en inputs           */
+  --color-text-primary: #0d2847; /* Texto principal — títulos             */
+  --color-text-body: #2c3e50; /* Texto cuerpo — párrafos               */
+  --color-text-secondary: #5a7499; /* Texto secundario — subtítulos         */
+  --color-text-service: #1b4b8f; /* Texto azul — etiquetas de servicio    */
+  --color-text-white: #ffffff;
+  --color-placeholder: #9ca3af; /* Color placeholder en inputs           */
 
   /* Bordes */
-  --color-border:           #E5E7EB; /* Borde estándar                        */
-  --color-border-soft:      #F0F4F8; /* Borde suave — cards                   */
+  --color-border: #e5e7eb; /* Borde estándar                        */
+  --color-border-soft: #f0f4f8; /* Borde suave — cards                   */
 
   /* --- Tipografías -------------------------------------------------------- */
-  --font-title:             "Montserrat", sans-serif;
-  --font-body:              "Open Sans", sans-serif;
+  --font-title: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
 
   /* --- Tamaños de fuente -------------------------------------------------- */
-  --text-h1:                3.5rem;
-  --text-h2:                2.25rem;
-  --text-h3:                1.5rem;
-  --text-intro:             1.125rem;
-  --text-body:              1rem;
-  --text-micro:             0.875rem;
-  --text-small:             0.75rem;
-  --text-label:             0.6875rem;
+  --text-h1: 3.5rem;
+  --text-h2: 2.25rem;
+  --text-h3: 1.5rem;
+  --text-intro: 1.125rem;
+  --text-body: 1rem;
+  --text-micro: 0.875rem;
+  --text-small: 0.75rem;
+  --text-label: 0.6875rem;
 
   /* --- Radios de borde ---------------------------------------------------- */
-  --radius-button:          8px;
-  --radius-card:            12px;
+  --radius-button: 8px;
+  --radius-card: 12px;
 
   /* --- Espaciados --------------------------------------------------------- */
-  --spacing-xs:             4px;
-  --spacing-sm:             8px;
-  --spacing-md:             16px;
-  --spacing-lg:             24px;
-  --spacing-xl:             32px;
-  --spacing-2xl:            48px;
-  --spacing-3xl:            64px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* --- Tamaños de contenedor (max-w-sm, max-w-xl, etc. en Tailwind v4) --- */
+  --container-xs:  20rem;   /* 320px  */
+  --container-sm:  24rem;   /* 384px  */
+  --container-md:  28rem;   /* 448px  */
+  --container-lg:  32rem;   /* 512px  */
+  --container-xl:  36rem;   /* 576px  */
+  --container-2xl: 42rem;   /* 672px  */
+  --container-3xl: 48rem;   /* 768px  */
+  --container-4xl: 56rem;   /* 896px  */
+  --container-5xl: 64rem;   /* 1024px */
+  --container-6xl: 72rem;   /* 1152px */
+  --container-7xl: 80rem;   /* 1280px */
 }
 
 /* ─── Estilos base ────────────────────────────────────────────────────────── */
@@ -64,7 +77,24 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-title);
   color: var(--color-text-primary);
+}
+
+/* ─── Animaciones ─────────────────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

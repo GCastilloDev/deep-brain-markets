@@ -96,20 +96,20 @@ export default function MobileMenu({ items, cta, ctaHref, lang }: MobileMenuProp
                 href={ctaHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full max-w-xs h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center w-full max-w-[320px] h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] transition-opacity hover:opacity-90"
               >
                 {cta}
               </a>
             ) : (
               <Link
                 href={ctaHref}
-                className="inline-flex items-center justify-center w-full max-w-xs h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center w-full max-w-[320px] h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] transition-opacity hover:opacity-90"
               >
                 {cta}
               </Link>
             )
           ) : (
-            <span className="inline-flex items-center justify-center w-full max-w-xs h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] opacity-50 cursor-default">
+            <span className="inline-flex items-center justify-center w-full max-w-[320px] h-12 bg-primary text-white font-title font-semibold text-sm rounded-[8px] opacity-50 cursor-default">
               {cta}
             </span>
           )}

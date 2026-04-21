@@ -3,6 +3,7 @@
 
 export const ACTIVE_ROUTES = new Set([
   "/",                                                   /* Página principal */
+  "/blog",                                               /* Blog                         */
   "/servicios/legal-contable",                           /* Área Legal y Contable */
   "/servicios/legal-contable/aduanas-comercio-exterior", /* Aduanas y Comercio Exterior */
   "/servicios/legal-contable/derecho-mercantil",         /* Derecho Mercantil y Corporativo */

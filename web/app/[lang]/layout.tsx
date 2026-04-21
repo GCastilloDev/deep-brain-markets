@@ -61,7 +61,7 @@ export default async function LangLayout({
           <Navbar lang={lang} />
 
           {/* Contenido principal de cada página */}
-          <main className="flex-1">
+          <main className="flex-1 w-full min-w-0">
             {children}
           </main>
 
