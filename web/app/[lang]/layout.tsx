@@ -23,6 +23,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://deep-brain-markets.vercel.app"),
   title: {
     template: "%s | Deep Brain Markets",
     default: "Deep Brain Markets",
