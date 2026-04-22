@@ -7,6 +7,7 @@ export const ACTIVE_ROUTES = new Set([
   "/servicios/legal-contable",                           /* Área Legal y Contable */
   "/servicios/legal-contable/aduanas-comercio-exterior", /* Aduanas y Comercio Exterior */
   "/servicios/legal-contable/derecho-mercantil",         /* Derecho Mercantil y Corporativo */
+  "/contacto",                                           /* Página de Contacto */
 ]);
 
 /* Retorna el href solo si la ruta está activa, undefined en caso contrario */

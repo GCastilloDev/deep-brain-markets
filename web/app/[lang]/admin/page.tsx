@@ -6,7 +6,7 @@ import Link from "next/link";
 import { 
   Shield, Lock, Eye, EyeOff, Loader2, 
   MessageSquare, LayoutDashboard, ArrowRight,
-  AlertCircle, LogOut
+  AlertCircle, LogOut, Users, Mail
 } from "lucide-react";
 import { useParams } from "next/navigation";
 
@@ -154,6 +154,29 @@ export default function AdminHubPage() {
           </h2>
           <p className="font-body text-[14px] text-text-secondary leading-relaxed flex-1">
             {t("nav_moderation_desc")}
+          </p>
+          <div className="mt-5 flex items-center gap-1.5 font-title font-bold text-[13px] text-primary">
+            {t("btn_access")}
+            <ArrowRight className="w-3.5 h-3.5" />
+          </div>
+        </Link>
+
+        {/* Card: Gestión de Contactos */}
+        <Link 
+          href={`/${lang}/admin/contacts`}
+          className="group flex flex-col p-6 bg-white border border-border rounded-[16px] hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+        >
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center justify-center w-12 h-12 rounded-[12px] bg-bg-soft-blue text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <Mail className="w-6 h-6" />
+            </div>
+            <ArrowRight className="w-5 h-5 text-text-secondary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+          </div>
+          <h2 className="font-title font-bold text-[18px] text-text-primary mb-2 group-hover:text-primary transition-colors">
+            {t("nav_contacts")}
+          </h2>
+          <p className="font-body text-[14px] text-text-secondary leading-relaxed flex-1">
+            {t("nav_contacts_desc")}
           </p>
           <div className="mt-5 flex items-center gap-1.5 font-title font-bold text-[13px] text-primary">
             {t("btn_access")}
