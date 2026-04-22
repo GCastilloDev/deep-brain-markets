@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: fromEmail,
       to: process.env.CONTACT_NOTIFICATION_EMAIL || "info@deepbrainmarkets.com",
-      reply_to: email, // Permite que el admin responda directamente al cliente
+      replyTo: email, // Permite que el admin responda directamente al cliente
       subject: `Nueva Solicitud de Contacto: ${name}`,
       html: `
         <div style="font-family: sans-serif; padding: 20px; color: #333; max-width: 600px; border: 1px solid #eee; border-radius: 12px;">
