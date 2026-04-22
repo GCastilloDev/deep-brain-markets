@@ -59,8 +59,8 @@ export default function HeroHome({ lang }: HeroHomeProps) {
             </span>
           </h1>
 
-          {/* Subtítulo */}
-          <p className="font-body text-[14px] sm:text-[18px] text-[#64748B] leading-relaxed max-w-[640px]">
+          {/* Subtítulo — Color oscurecido para contraste */}
+          <p className="font-body text-[14px] sm:text-[18px] text-[#334155] leading-relaxed max-w-[640px]">
             {t("subtitle")}
           </p>
 

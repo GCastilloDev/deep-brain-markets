@@ -23,10 +23,10 @@ export default function LangSwitcher() {
       aria-label={`Cambiar idioma a ${locale === "es" ? "inglés" : "español"}`}
       className="flex items-center gap-1 text-sm font-semibold text-text-primary hover:text-primary transition-colors cursor-pointer"
     >
-      {/* Idioma inactivo — opacidad reducida */}
-      <span className={locale === "es" ? "opacity-100" : "opacity-40"}>ES</span>
-      <span className="opacity-30">/</span>
-      <span className={locale === "en" ? "opacity-100" : "opacity-40"}>EN</span>
+      {/* Idioma inactivo — opacidad aumentada para contraste */}
+      <span className={locale === "es" ? "opacity-100" : "opacity-70"}>ES</span>
+      <span className="opacity-60">/</span>
+      <span className={locale === "en" ? "opacity-100" : "opacity-70"}>EN</span>
     </button>
   );
 }

@@ -86,7 +86,7 @@ export default function Footer({ lang }: FooterProps) {
                         className={`text-[13px] transition-colors ${
                           link.href
                             ? "text-text-secondary hover:text-primary cursor-pointer"
-                            : "text-text-secondary opacity-50 cursor-default"
+                          : "text-text-secondary opacity-70 cursor-default"
                         }`}
                       >
                         {link.label}
@@ -179,7 +179,8 @@ export default function Footer({ lang }: FooterProps) {
 
       {/* Barra inferior — copyright */}
       <div className="border-t border-border px-5 md:px-20 py-5">
-        <p className="text-center text-[11px] text-placeholder">
+        {/* Copyright — Color secundario oscurecido */}
+        <p className="text-center text-[11px] text-text-secondary">
           © {new Date().getFullYear()} Deep Brain Markets. {t("rights")}
         </p>
       </div>

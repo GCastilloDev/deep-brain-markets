@@ -13,8 +13,8 @@ export default function PartnersStrip() {
     <section aria-label={t("label")} className="w-full bg-[#F1F5F9]">
       <div className="px-5 md:px-20 py-12 max-w-[1440px] mx-auto flex flex-col items-center gap-4 md:gap-6">
 
-        {/* Etiqueta superior */}
-        <p className="font-title font-semibold text-[11px] text-[#9CA3AF] tracking-[3px] text-center uppercase">
+        {/* Etiqueta superior — Oscurecida para contraste */}
+        <p className="font-title font-semibold text-[11px] text-[#64748B] tracking-[3px] text-center uppercase">
           {t("label")}
         </p>
 

@@ -19,10 +19,10 @@
   /* Textos */
   --color-text-primary: #0d2847; /* Texto principal — títulos             */
   --color-text-body: #2c3e50; /* Texto cuerpo — párrafos               */
-  --color-text-secondary: #5a7499; /* Texto secundario — subtítulos         */
+  --color-text-secondary: #475569; /* Texto secundario — subtítulos (Oscurecido para contraste) */
   --color-text-service: #1b4b8f; /* Texto azul — etiquetas de servicio    */
   --color-text-white: #ffffff;
-  --color-placeholder: #9ca3af; /* Color placeholder en inputs           */
+  --color-placeholder: #6b7280; /* Color placeholder en inputs (Oscurecido para contraste) */
 
   /* Bordes */
   --color-border: #e5e7eb; /* Borde estándar                        */

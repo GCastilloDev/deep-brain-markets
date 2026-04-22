@@ -62,7 +62,7 @@ export default function Navbar({ lang }: NavbarProps) {
                   className={`text-[15px] font-normal transition-colors ${
                     item.href
                       ? "text-text-body hover:text-primary cursor-pointer"
-                      : "text-text-body opacity-50 cursor-default"
+                      : "text-text-body opacity-70 cursor-default"
                   }`}
                 >
                   {item.label}
