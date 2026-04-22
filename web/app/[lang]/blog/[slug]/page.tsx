@@ -62,6 +62,60 @@ export default async function BlogPostPage({
     .order("created_at", { ascending: true });
 
   const comments = (commentsData ?? []) as Comment[];
+  const baseUrl = "https://deep-brain-markets.vercel.app";
+
+  /* JSON-LD Schema */
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${baseUrl}/${lang}/blog/${slug}/#article`,
+        "headline": post.title,
+        "description": post.excerpt,
+        "datePublished": post.date,
+        "author": {
+          "@type": "Person",
+          "name": post.author
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": `${baseUrl}/logo.png`
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Deep Brain Markets",
+          "logo": {
+            "@type": "ImageObject",
+            "url": `${baseUrl}/logo.png`
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": lang === "es" ? "Inicio" : "Home",
+            "item": `${baseUrl}/${lang}`
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": `${baseUrl}/${lang}/blog`
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": post.title,
+            "item": `${baseUrl}/${lang}/blog/${slug}`
+          }
+        ]
+      }
+    ]
+  };
 
   /* Formatea la fecha según el idioma */
   const formattedDate = new Date(post.date).toLocaleDateString(
@@ -71,6 +125,10 @@ export default async function BlogPostPage({
 
   return (
     <article className="w-full bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="px-5 md:px-20 py-8 md:py-12 max-w-[800px] mx-auto">
         {/* Breadcrumb / Back */}
         <Link

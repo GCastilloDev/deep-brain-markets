@@ -43,6 +43,35 @@ export default async function HomePage({
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://deep-brain-markets.vercel.app/#organization",
+            "name": "Deep Brain Markets",
+            "url": "https://deep-brain-markets.vercel.app",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://deep-brain-markets.vercel.app/logo.png",
+              "width": 190,
+              "height": 60
+            },
+            "description": t("description"),
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+52-55-1234-5678",
+              "contactType": "customer service",
+              "areaServed": "MX",
+              "availableLanguage": ["Spanish", "English"]
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/deep-brain-markets"
+            ]
+          })
+        }}
+      />
       {/* Sección hero — primera sección visible al cargar */}
       <HeroHome lang={lang} />
       {/* Sección de expertise — 2 cards con servicios principales */}

@@ -36,18 +36,45 @@ function JsonLd({ lang }: { lang: string }) {
   const baseUrl = "https://deepbrainmarkets.com";
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    name: lang === "es" ? "Aduanas y Comercio Exterior" : "Customs & Foreign Trade",
-    provider: {
-      "@type": "Organization",
-      name: "Deep Brain Markets",
-      url: baseUrl,
-    },
-    areaServed: "MX",
-    serviceType: lang === "es"
-      ? ["Consultoría Aduanera", "Defensa PAMA", "Logística Internacional", "Derecho Marítimo"]
-      : ["Customs Advisory", "PAMA Defense", "International Logistics", "Maritime Law"],
-    url: `${baseUrl}/${lang}/servicios/legal-contable/aduanas-comercio-exterior`,
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": lang === "es" ? "Aduanas y Comercio Exterior" : "Customs & Foreign Trade",
+        "provider": {
+          "@type": "Organization",
+          "name": "Deep Brain Markets",
+          "url": "https://deep-brain-markets.vercel.app"
+        },
+        "areaServed": "MX",
+        "serviceType": lang === "es"
+          ? ["Consultoría Aduanera", "Defensa PAMA", "Logística Internacional", "Derecho Marítimo"]
+          : ["Customs Advisory", "PAMA Defense", "International Logistics", "Maritime Law"],
+        "url": `https://deep-brain-markets.vercel.app/${lang}/servicios/legal-contable/aduanas-comercio-exterior`
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": lang === "es" ? "Inicio" : "Home",
+            "item": `https://deep-brain-markets.vercel.app/${lang}`
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": lang === "es" ? "Legal y Contable" : "Legal & Accounting",
+            "item": `https://deep-brain-markets.vercel.app/${lang}/servicios/legal-contable`
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": lang === "es" ? "Aduanas y Comercio Exterior" : "Customs & Foreign Trade",
+            "item": `https://deep-brain-markets.vercel.app/${lang}/servicios/legal-contable/aduanas-comercio-exterior`
+          }
+        ]
+      }
+    ]
   };
 
   return (
