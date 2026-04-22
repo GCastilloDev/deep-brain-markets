@@ -95,9 +95,16 @@ export default function ContactForm({ lang }: ContactFormProps) {
       });
 
       if (!res.ok) {
-        const data = await res.json();
+        let errorMessage = t("error_msg");
+        try {
+          const data = await res.json();
+          errorMessage = data.error || errorMessage;
+        } catch (e) {
+          console.error("Non-JSON error response from server:", e);
+        }
+        
         setState("error");
-        setErrorMsg(data.error || t("error_msg"));
+        setErrorMsg(errorMessage);
         return;
       }
 

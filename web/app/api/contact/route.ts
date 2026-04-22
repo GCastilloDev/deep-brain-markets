@@ -3,6 +3,20 @@ import { supabaseAdmin } from "@/lib/supabase";
 import { Resend } from "resend";
 
 export async function POST(req: NextRequest) {
+  // Verificación preventiva de variables de entorno
+  if (!process.env.RESEND_API_KEY || !process.env.RECAPTCHA_SECRET_KEY || !process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) {
+    const missing = [];
+    if (!process.env.RESEND_API_KEY) missing.push("RESEND_API_KEY");
+    if (!process.env.RECAPTCHA_SECRET_KEY) missing.push("RECAPTCHA_SECRET_KEY");
+    if (!process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) missing.push("NEXT_PUBLIC_RECAPTCHA_SITE_KEY");
+    
+    console.error("Missing Environment Variables on Vercel:", missing.join(", "));
+    return NextResponse.json(
+      { error: "Server Configuration Error (Missing Env Vars)", details: missing },
+      { status: 500 }
+    );
+  }
+
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const body = await req.json();
