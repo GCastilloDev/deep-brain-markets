@@ -40,6 +40,7 @@ export default async function HomePage({
   const { lang } = await params;
   /* Habilita SSG para este idioma */
   setRequestLocale(lang);
+  const t = await getTranslations({ locale: lang, namespace: "home" });
 
   return (
     <>
